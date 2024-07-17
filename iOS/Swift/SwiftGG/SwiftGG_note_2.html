@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SwiftGG 文档翻译笔记2-FirstClass | WaterFly</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="Just Coding">
+    
+    <link rel="preload" href="/assets/css/0.styles.84748982.css" as="style"><link rel="preload" href="/assets/js/app.3efcfa1f.js" as="script"><link rel="preload" href="/assets/js/3.d41f5393.js" as="script"><link rel="preload" href="/assets/js/1.0d0e82e9.js" as="script"><link rel="preload" href="/assets/js/21.a26b4bf6.js" as="script"><link rel="prefetch" href="/assets/js/10.6a591f7b.js"><link rel="prefetch" href="/assets/js/11.2da2c136.js"><link rel="prefetch" href="/assets/js/12.597e1e9e.js"><link rel="prefetch" href="/assets/js/13.bfe6e49a.js"><link rel="prefetch" href="/assets/js/14.d5101ebe.js"><link rel="prefetch" href="/assets/js/15.d075eb78.js"><link rel="prefetch" href="/assets/js/16.1de846ec.js"><link rel="prefetch" href="/assets/js/17.73e1206f.js"><link rel="prefetch" href="/assets/js/18.3563029d.js"><link rel="prefetch" href="/assets/js/19.018202b6.js"><link rel="prefetch" href="/assets/js/20.92e231d8.js"><link rel="prefetch" href="/assets/js/22.a240a942.js"><link rel="prefetch" href="/assets/js/23.5d73353d.js"><link rel="prefetch" href="/assets/js/24.1a101222.js"><link rel="prefetch" href="/assets/js/25.f7c05ac5.js"><link rel="prefetch" href="/assets/js/26.cf0f99d3.js"><link rel="prefetch" href="/assets/js/27.4412c990.js"><link rel="prefetch" href="/assets/js/28.a9e9a7e1.js"><link rel="prefetch" href="/assets/js/29.9b39ea41.js"><link rel="prefetch" href="/assets/js/30.19dafc01.js"><link rel="prefetch" href="/assets/js/31.9d2c45f0.js"><link rel="prefetch" href="/assets/js/32.f7aa758f.js"><link rel="prefetch" href="/assets/js/33.54518586.js"><link rel="prefetch" href="/assets/js/34.71ab4ffb.js"><link rel="prefetch" href="/assets/js/35.5442dc08.js"><link rel="prefetch" href="/assets/js/36.3d80fb49.js"><link rel="prefetch" href="/assets/js/37.d767afa3.js"><link rel="prefetch" href="/assets/js/38.15d6331f.js"><link rel="prefetch" href="/assets/js/39.a6c25426.js"><link rel="prefetch" href="/assets/js/4.d08f1479.js"><link rel="prefetch" href="/assets/js/40.87d678b9.js"><link rel="prefetch" href="/assets/js/41.edd890b5.js"><link rel="prefetch" href="/assets/js/42.d6677079.js"><link rel="prefetch" href="/assets/js/43.ff4d75ff.js"><link rel="prefetch" href="/assets/js/44.32c7a951.js"><link rel="prefetch" href="/assets/js/45.2c851721.js"><link rel="prefetch" href="/assets/js/46.9bbe5a11.js"><link rel="prefetch" href="/assets/js/47.0e2c36cc.js"><link rel="prefetch" href="/assets/js/48.09bc8442.js"><link rel="prefetch" href="/assets/js/49.52342b74.js"><link rel="prefetch" href="/assets/js/5.9634f48e.js"><link rel="prefetch" href="/assets/js/50.c9e3c4c5.js"><link rel="prefetch" href="/assets/js/51.28a51db9.js"><link rel="prefetch" href="/assets/js/52.58832236.js"><link rel="prefetch" href="/assets/js/53.86af7b76.js"><link rel="prefetch" href="/assets/js/54.973c15bf.js"><link rel="prefetch" href="/assets/js/55.d4a03e12.js"><link rel="prefetch" href="/assets/js/56.ac7e97e0.js"><link rel="prefetch" href="/assets/js/57.7fa14d11.js"><link rel="prefetch" href="/assets/js/58.b0f390b8.js"><link rel="prefetch" href="/assets/js/59.62b96874.js"><link rel="prefetch" href="/assets/js/6.4c543392.js"><link rel="prefetch" href="/assets/js/60.0c40514a.js"><link rel="prefetch" href="/assets/js/61.65259e68.js"><link rel="prefetch" href="/assets/js/62.9fb64114.js"><link rel="prefetch" href="/assets/js/63.3975ffd5.js"><link rel="prefetch" href="/assets/js/64.911d2812.js"><link rel="prefetch" href="/assets/js/65.ce9ab40b.js"><link rel="prefetch" href="/assets/js/66.b89de3df.js"><link rel="prefetch" href="/assets/js/67.4169b86c.js"><link rel="prefetch" href="/assets/js/68.a812ad4b.js"><link rel="prefetch" href="/assets/js/69.b0c76c03.js"><link rel="prefetch" href="/assets/js/7.2aba56aa.js"><link rel="prefetch" href="/assets/js/70.9749f302.js"><link rel="prefetch" href="/assets/js/71.0d38010b.js"><link rel="prefetch" href="/assets/js/72.a6338004.js"><link rel="prefetch" href="/assets/js/73.c1001eb8.js"><link rel="prefetch" href="/assets/js/74.0069037e.js"><link rel="prefetch" href="/assets/js/75.c4591a8d.js"><link rel="prefetch" href="/assets/js/76.e1a3f216.js"><link rel="prefetch" href="/assets/js/77.df0b0aac.js"><link rel="prefetch" href="/assets/js/78.2f535a98.js"><link rel="prefetch" href="/assets/js/79.60e4b9f5.js"><link rel="prefetch" href="/assets/js/8.c5d718a6.js"><link rel="prefetch" href="/assets/js/80.50af71ac.js"><link rel="prefetch" href="/assets/js/81.7d753c90.js"><link rel="prefetch" href="/assets/js/82.5703b0fa.js"><link rel="prefetch" href="/assets/js/83.4af8ebaa.js"><link rel="prefetch" href="/assets/js/84.ed963d52.js"><link rel="prefetch" href="/assets/js/85.7cb175ff.js"><link rel="prefetch" href="/assets/js/86.bd0d1f92.js"><link rel="prefetch" href="/assets/js/87.f00e8426.js"><link rel="prefetch" href="/assets/js/88.a34c0493.js"><link rel="prefetch" href="/assets/js/89.564cb64c.js"><link rel="prefetch" href="/assets/js/9.25143fa3.js"><link rel="prefetch" href="/assets/js/90.ce031d67.js"><link rel="prefetch" href="/assets/js/91.2a75f163.js"><link rel="prefetch" href="/assets/js/92.a2591da3.js"><link rel="prefetch" href="/assets/js/93.6af4f4b0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.84748982.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-349e681a><div data-v-349e681a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-b3e6ef50 data-v-349e681a data-v-349e681a><h3 class="title" data-v-b3e6ef50>WaterFly</h3> <p class="description" data-v-b3e6ef50>Just Coding</p> <label id="box" class="inputBox" data-v-b3e6ef50><input type="password" value="" data-v-b3e6ef50> <span data-v-b3e6ef50>Konck! Knock!</span> <button data-v-b3e6ef50>OK</button></label> <div class="footer" data-v-b3e6ef50><span data-v-b3e6ef50><i class="iconfont reco-theme" data-v-b3e6ef50></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-b3e6ef50>vuePress-theme-reco</a></span> <span data-v-b3e6ef50><i class="iconfont reco-copyright" data-v-b3e6ef50></i> <a data-v-b3e6ef50><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-349e681a><header class="navbar" data-v-349e681a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">WaterFly</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><a href="/Algorithm/" class="nav-link"><i class="undefined"></i>
+  算法
+</a></div><div class="nav-item"><a href="/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      iOS
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/Swift/" class="nav-link router-link-active"><i class="undefined"></i>
+  Swift
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/OC/" class="nav-link"><i class="undefined"></i>
+  OC
+</a></li></ul></div></div><div class="nav-item"><a href="/Other/" class="nav-link"><i class="undefined"></i>
+  Other
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/waterfly" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-349e681a></div> <aside class="sidebar" data-v-349e681a><div class="personal-info-wrapper" data-v-1bfe3fa5 data-v-349e681a><img src="/bike.png" alt="author-avatar" class="personal-img" data-v-1bfe3fa5> <!----> <div class="num" data-v-1bfe3fa5><div data-v-1bfe3fa5><h3 data-v-1bfe3fa5>83</h3> <h6 data-v-1bfe3fa5>Articles</h6></div> <div data-v-1bfe3fa5><h3 data-v-1bfe3fa5>34</h3> <h6 data-v-1bfe3fa5>Tags</h6></div></div> <ul class="social-links" data-v-1bfe3fa5></ul> <hr data-v-1bfe3fa5></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><a href="/Algorithm/" class="nav-link"><i class="undefined"></i>
+  算法
+</a></div><div class="nav-item"><a href="/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      iOS
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/Swift/" class="nav-link router-link-active"><i class="undefined"></i>
+  Swift
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/OC/" class="nav-link"><i class="undefined"></i>
+  OC
+</a></li></ul></div></div><div class="nav-item"><a href="/Other/" class="nav-link"><i class="undefined"></i>
+  Other
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/waterfly" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/iOS/Swift/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/iOS/Swift/SwiftGG/SwiftGG_note_1.html" class="sidebar-link">SwiftGG 文档翻译笔记1-基础部分函数闭包</a></li><li><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html" aria-current="page" class="active sidebar-link">SwiftGG 文档翻译笔记2-FirstClass</a></li><li><a href="/iOS/Swift/SwiftGG/SwiftGG_note_3.html" class="sidebar-link">SwiftGG 文档翻译笔记3-泛型可选连错误处理访问控制等</a></li><li><a href="/iOS/Swift/EquatableHashableComparable.html" class="sidebar-link">Equatable, Hashable, Comparable</a></li><li><a href="/iOS/Swift/String.html" class="sidebar-link">String</a></li><li><a href="/iOS/Swift/SequenceAndCollectionProtocols.html" class="sidebar-link">Sequence and Collection Protocols</a></li><li><a href="/iOS/Swift/Sequence.html" class="sidebar-link">Sequence</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-b3e6ef50 data-v-349e681a><h3 class="title" data-v-b3e6ef50>SwiftGG 文档翻译笔记2-FirstClass</h3> <!----> <label id="box" class="inputBox" data-v-b3e6ef50><input type="password" value="" data-v-b3e6ef50> <span data-v-b3e6ef50>Konck! Knock!</span> <button data-v-b3e6ef50>OK</button></label> <div class="footer" data-v-b3e6ef50><span data-v-b3e6ef50><i class="iconfont reco-theme" data-v-b3e6ef50></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-b3e6ef50>vuePress-theme-reco</a></span> <span data-v-b3e6ef50><i class="iconfont reco-copyright" data-v-b3e6ef50></i> <a data-v-b3e6ef50><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-349e681a><div data-v-349e681a><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">SwiftGG 文档翻译笔记2-FirstClass</h1> <div data-v-0b291498><!----> <i class="iconfont reco-date" data-v-0b291498><span data-v-0b291498>8/15/2020</span></i> <!----> <i class="tags iconfont reco-tag" data-v-0b291498><span class="tag-item" data-v-0b291498>Swift</span></i></div></div> <div class="theme-reco-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#swiftgg-文档翻译笔记2-firstclass">SwiftGG 文档翻译笔记2-FirstClass</a><ul><li><a href="#枚举">枚举</a><ul><li><a href="#枚举语法">枚举语法</a></li><li><a href="#caseiterable">CaseIterable</a></li><li><a href="#递归枚举">递归枚举</a></li></ul></li><li><a href="#类和结构体">类和结构体</a><ul><li><a href="#相同点">相同点</a></li><li><a href="#不同点">不同点</a></li><li><a href="#关于值类型与引用类型">关于值类型与引用类型：</a></li><li><a href="#在结构和类之间进行选择">在结构和类之间进行选择</a></li><li><a href="#基本定义">基本定义</a></li><li><a href="#指针">指针</a></li></ul></li><li><a href="#属性">属性</a><ul><li><a href="#延时加载存储属性">延时加载存储属性</a></li><li><a href="#计算属性">计算属性</a></li><li><a href="#属性观察器">属性观察器</a><ul><li><a href="#in-out-方式参数">in-out 方式参数</a></li></ul></li><li><a href="#属性包装器">属性包装器</a><ul><li><a href="#初始值">初始值</a></li><li><a href="#呈现值">呈现值</a></li></ul></li><li><a href="#全局变量和局部变量">全局变量和局部变量</a></li><li><a href="#类型属性">类型属性</a></li></ul></li><li><a href="#方法">方法</a><ul><li><a href="#结构体和枚举">结构体和枚举</a></li><li><a href="#类方法">类方法</a></li></ul></li><li><a href="#下标">下标</a><ul><li><a href="#类型下标">类型下标</a></li></ul></li><li><a href="#继承">继承</a></li><li><a href="#构造过程">构造过程</a><ul><li><a href="#多态">多态</a></li><li><a href="#构造基本形式">构造基本形式</a></li><li><a href="#值类型的构造器-枚举或结构体">值类型的构造器（枚举或结构体）</a></li><li><a href="#类的构造器">类的构造器</a><ul><li><a href="#构造器代理">构造器代理</a></li><li><a href="#两段式构造过程">两段式构造过程</a></li><li><a href="#构造器的继承和重写">构造器的继承和重写</a></li><li><a href="#必要构造器">必要构造器</a></li></ul></li><li><a href="#可失败构造器">可失败构造器</a></li></ul></li><li><a href="#析构过程">析构过程</a></li><li><a href="#扩展">扩展</a><ul><li><a href="#基本定义">基本定义</a></li></ul></li><li><a href="#协议">协议</a><ul><li><a href="#基本格式">基本格式</a></li><li><a href="#扩展">扩展</a></li><li><a href="#可选协议">可选协议</a></li></ul></li><li><a href="#嵌套类型">嵌套类型</a></li></ul></li></ul></div>
+[toc]<p></p> <h1 id="swiftgg-文档翻译笔记2-firstclass"><a href="#swiftgg-文档翻译笔记2-firstclass" class="header-anchor">#</a> SwiftGG 文档翻译笔记2-FirstClass</h1> <p>枚举、结构体、类、协议、扩展</p> <h2 id="枚举"><a href="#枚举" class="header-anchor">#</a> 枚举</h2> <p>Swift中枚举非常强大，基于OC枚举的基础上增加了很多的功能，Swift中的枚举是枚举和联合体的联合，同时还能定义实例方法和构造函数，还可以遵循协议，非常灵活。</p> <p>在Swift中，枚举类型是 <strong>first-class</strong>，采用了很多类中才有的特性：</p> <ul><li>计算属性，用于提供枚举值的附加信息</li> <li>实例方法，于提供和枚举值相关联的功能</li> <li>遵循协议</li> <li>定义构造函数，提供一个初始值</li> <li>内部定义函数</li></ul> <h3 id="枚举语法"><a href="#枚举语法" class="header-anchor">#</a> 枚举语法</h3> <p>关键字：<code>enum</code>、<code>rawValue</code></p> <div class="language-swift extra-class"><pre class="language-swift"><code>
+<span class="token comment">//基本形式</span>
+<span class="token keyword">enum</span> <span class="token class-name">CompassPoint</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> north
+    <span class="token keyword">case</span> south
+    <span class="token keyword">case</span> east
+    <span class="token keyword">case</span> west
+<span class="token punctuation">}</span>
+
+<span class="token comment">//关联值形式，可以给枚举值赋值，当做变量使用，同一时间只能存储一个值</span>
+<span class="token keyword">enum</span> <span class="token class-name">Barcode</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token function">upc</span><span class="token punctuation">(</span><span class="token class-name">Int</span><span class="token punctuation">,</span> <span class="token class-name">Int</span><span class="token punctuation">,</span> <span class="token class-name">Int</span><span class="token punctuation">,</span> <span class="token class-name">Int</span><span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token function">qrCode</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//原始值，rawValue，通过 rawValue 获取到对应的枚举值</span>
+<span class="token comment">//声明为Int的，默认值从0开始，并递增1；声明为String的，默认值为case名称</span>
+<span class="token keyword">enum</span> <span class="token class-name">Planet</span><span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> mercury <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> venus<span class="token punctuation">,</span> earth<span class="token punctuation">,</span> mars<span class="token punctuation">,</span> jupiter<span class="token punctuation">,</span> saturn<span class="token punctuation">,</span> uranus<span class="token punctuation">,</span> neptune
+<span class="token punctuation">}</span>
+
+<span class="token comment">// possiblePlanet 类型为 Planet? 值为 Planet.uranus</span>
+<span class="token keyword">let</span> possiblePlanet <span class="token operator">=</span> <span class="token class-name">Planet</span><span class="token punctuation">(</span>rawValue<span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">)</span>
+
+</code></pre></div><h3 id="caseiterable"><a href="#caseiterable" class="header-anchor">#</a> CaseIterable</h3> <p>枚举可遵循 <code>CaseIterable</code> 协议，该协议会自动生成一个<code>allCases</code>属性，类型为数组，内部包含所有枚举的集合。</p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">enum</span> <span class="token class-name">Beverage</span><span class="token punctuation">:</span> <span class="token class-name">CaseIterable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> coffee<span class="token punctuation">,</span> tea<span class="token punctuation">,</span> juice
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> numberOfChoices <span class="token operator">=</span> <span class="token class-name">Beverage</span><span class="token punctuation">.</span>allCases<span class="token punctuation">.</span>count
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;</span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">numberOfChoices</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string"> beverages available&quot;</span></span><span class="token punctuation">)</span>
+<span class="token comment">// 打印“3 beverages available”</span>
+</code></pre></div><p>注，该协议不需要实现，会自动生成<code>allCases</code></p> <h3 id="递归枚举"><a href="#递归枚举" class="header-anchor">#</a> 递归枚举</h3> <p>关键字：<code>indirect</code>，可修饰枚举成员或整个枚举</p> <p>为实现枚举成员的递归，可以使用关键字<code>indirect</code>声明，声明后即可支持递归调用。</p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">indirect</span> <span class="token keyword">enum</span> <span class="token class-name">ArithmeticExpression</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token function">number</span><span class="token punctuation">(</span><span class="token class-name">Int</span><span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token function">addition</span><span class="token punctuation">(</span><span class="token class-name">ArithmeticExpression</span><span class="token punctuation">,</span> <span class="token class-name">ArithmeticExpression</span><span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token function">multiplication</span><span class="token punctuation">(</span><span class="token class-name">ArithmeticExpression</span><span class="token punctuation">,</span> <span class="token class-name">ArithmeticExpression</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> five <span class="token operator">=</span> <span class="token class-name">ArithmeticExpression</span><span class="token punctuation">.</span><span class="token function">number</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> four <span class="token operator">=</span> <span class="token class-name">ArithmeticExpression</span><span class="token punctuation">.</span><span class="token function">number</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> sum <span class="token operator">=</span> <span class="token class-name">ArithmeticExpression</span><span class="token punctuation">.</span><span class="token function">addition</span><span class="token punctuation">(</span>five<span class="token punctuation">,</span> four<span class="token punctuation">)</span>
+<span class="token comment">//递归调用</span>
+<span class="token keyword">let</span> product <span class="token operator">=</span> <span class="token class-name">ArithmeticExpression</span><span class="token punctuation">.</span><span class="token function">multiplication</span><span class="token punctuation">(</span>sum<span class="token punctuation">,</span> <span class="token class-name">ArithmeticExpression</span><span class="token punctuation">.</span><span class="token function">number</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="类和结构体"><a href="#类和结构体" class="header-anchor">#</a> 类和结构体</h2> <p>Swift中类和结构体非常的像，具有很多传统类的特性，都可以定义变量、属性、构造函数、实例方法、遵循协议等。但是结构体更偏向于数据结构，在Swift中一般优先用结构体，结构体能满足我们大多数需求。可以把结构体理解为特殊的类。</p> <h3 id="相同点"><a href="#相同点" class="header-anchor">#</a> 相同点</h3> <ul><li>定义属性用于存储值</li> <li>定义方法用于提供功能</li> <li>定义下标操作用于通过下标语法访问它们的值</li> <li>定义构造器用于设置初始值</li> <li>通过扩展以增加默认实现之外的功能</li> <li>遵循协议以提供某种标准功能</li></ul> <h3 id="不同点"><a href="#不同点" class="header-anchor">#</a> 不同点</h3> <table><thead><tr><th>Struct</th> <th>Class</th></tr></thead> <tbody><tr><td>成员逐一构造器</td> <td></td></tr> <tr><td>值类型</td> <td>引用类型</td></tr> <tr><td></td> <td>继承</td></tr> <tr><td></td> <td>恒等判断（===）</td></tr> <tr><td></td> <td>析构器</td></tr></tbody></table> <h3 id="关于值类型与引用类型"><a href="#关于值类型与引用类型" class="header-anchor">#</a> 关于值类型与引用类型：</h3> <ul><li>目前只有类、函数、闭包是引用类型，其他数组、集合、字典、枚举、结构体等都是值类型。从一个变量赋值到另一个变量，就会发生复制。另外，集合类型里面如果包含的是值类型，在数组赋值时会值拷贝（数组和内容）；如果包含的是引用类型，比如类、函数、闭包，在赋值时数组会复制，内容只是引用不会发生复制。</li> <li>标准库定义的集合，例如数组，字典和字符串，都对复制进行了优化以降低性能成本。新集合不会立即复制，而是跟原集合共享同一份内存，共享同样的元素。在集合的某个副本要被修改前，才会复制它的元素。而你在代码中看起来就像是立即发生了复制。</li></ul> <h3 id="在结构和类之间进行选择"><a href="#在结构和类之间进行选择" class="header-anchor">#</a> 在结构和类之间进行选择</h3> <ul><li>优先使用结构体</li> <li>需要与OC混编时，使用Class</li> <li>需要 Control Identity 时，一般用Class。Class是引用类型，可以用恒等符===判断，如果需要类似全局实例，或多处引用，需要用Class</li></ul> <p>参考：<a href="https://developer.apple.com/documentation/swift/choosing_between_structures_and_classes" target="_blank" rel="noopener noreferrer">Choosing Between Structures and Classes<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="基本定义"><a href="#基本定义" class="header-anchor">#</a> 基本定义</h3> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">struct</span> <span class="token class-name">SomeStructure</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在这里定义结构体</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SomeClass</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在这里定义类</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="指针"><a href="#指针" class="header-anchor">#</a> 指针</h3> <p>Swift里面的引用类型并不是用指针实现，不直接指向内存地址。如果需要用与指针进行交互，参考 手动管理内存。一般与C交互的时候才需要用到Swift指针部分。</p> <p>参考：</p> <ul><li><p><a href="https://developer.apple.com/documentation/swift/swift_standard_library/manual_memory_management" target="_blank" rel="noopener noreferrer">官方文档Manual Memory Management<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p><a href="https://onevcat.com/2015/01/swift-pointer/" target="_blank" rel="noopener noreferrer">Swift 中的指针使用<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li></ul> <h2 id="属性"><a href="#属性" class="header-anchor">#</a> 属性</h2> <p>属性从存储角度分为：</p> <ul><li>存储属性，即实例变量或常量，可用于 类、结构体</li> <li>计算属性，提供get、set方法，可用于 类、结构体、枚举，只能用<code>var</code>修饰</li></ul> <p>从类的角度分为：</p> <ul><li>实例属性，类的实例，包含存储属性、计算属性</li> <li>类型属性，类型属性也有 存储类型属性 和 计算类型属性，<strong>first-class（枚举、结构体、类）都可以有类型属性</strong></li></ul> <p><strong>结构体是值类型，当赋值给常量后，不能再修改其任何属性。</strong></p> <h3 id="延时加载存储属性"><a href="#延时加载存储属性" class="header-anchor">#</a> 延时加载存储属性</h3> <ul><li>关键字  lazy</li> <li>第一次调用时才会被创建，必须声明为 var，即只能是变量</li> <li>实例属性的lazy是非线程安全；类属性的 lazy 是线程安全的，只会创建一次</li></ul> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">class</span> <span class="token class-name">DataManager</span> <span class="token punctuation">{</span>
+    <span class="token keyword">lazy</span> <span class="token keyword">var</span> importer <span class="token operator">=</span> <span class="token class-name">DataImporter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>		<span class="token comment">//复杂计算放到延迟创建</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="计算属性"><a href="#计算属性" class="header-anchor">#</a> 计算属性</h3> <p>计算属性不直接存储实例变量，只提供set、get 方法</p> <p>关键词：<code>set</code>、<code>get</code>、<code>newValue</code></p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token comment">//计算属性</span>
+<span class="token keyword">struct</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> one<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">10</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">set</span><span class="token punctuation">(</span>newOne<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>newOne<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  
+    <span class="token keyword">var</span> <span class="token class-name">Two</span><span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">10</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">set</span><span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>		<span class="token comment">//简化set写法，直接使用默认名称 newValue</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//只读计算属性，可直接省略get和花括号。注意有set 必须要有get，但可以只有get。</span>
+<span class="token keyword">struct</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> one<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">10</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="属性观察器"><a href="#属性观察器" class="header-anchor">#</a> 属性观察器</h3> <p>类似OC的KVC机制，监控和响应属性值的变化。</p> <p>关键词：<code>willSet</code>、<code>didSet</code>、<code>newValue</code>、<code>oldValue</code></p> <p>观察器：</p> <ul><li><code>willSet</code> 在新的值被设置之前调用，可指定参数名称，或用默认<code>newValue</code></li> <li><code>didSet</code> 在新的值被设置之后调用，可指定参数名称，或用默认<code>oldValue</code></li></ul> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">class</span> <span class="token class-name">StepCounter</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> totalSteps<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+        <span class="token keyword">willSet</span> <span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">didSet</span> <span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>oldValue<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="in-out-方式参数"><a href="#in-out-方式参数" class="header-anchor">#</a> in-out 方式参数</h4> <p>关键字：<code>inout</code>, <code>&amp;</code></p> <p>如果将带有观察器的属性通过 in-out 方式传入函数，<code>willSet</code> 和 <code>didSet</code> 也会调用。这是因为 in-out 参数采用了拷入拷出内存模式：即在函数内部使用的是参数的 copy，函数结束后，又对参数重新赋值。关于 in-out 参数详细的介绍，请参考 <a href="">输入输出参数</a>。</p> <div class="language-swift extra-class"><pre class="language-swift"><code>
+<span class="token keyword">class</span> <span class="token class-name">StepCounter</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> totalSteps<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+        <span class="token keyword">willSet</span> <span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">didSet</span> <span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>oldValue<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">func</span> <span class="token function-definition function">testInOut</span><span class="token punctuation">(</span> p <span class="token punctuation">:</span> <span class="token keyword">inout</span> <span class="token class-name">Int</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Void</span> <span class="token punctuation">{</span>   
+        p <span class="token operator">=</span> <span class="token number">3</span>		<span class="token comment">//这里是不会触发属性观察器；函数出栈后触发观察器</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> test <span class="token operator">=</span> <span class="token class-name">StepCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+test<span class="token punctuation">.</span>totalSteps <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>		<span class="token comment">//触发 willSet、didSet</span>
+test<span class="token punctuation">.</span><span class="token function">testInOut</span><span class="token punctuation">(</span>p<span class="token punctuation">:</span> <span class="token operator">&amp;</span>test<span class="token punctuation">.</span>totalSteps<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span>test<span class="token punctuation">.</span>totalSteps<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//如果没有该行代码，是不会触发观察器，内部做了优化。</span>
+
+</code></pre></div><h3 id="属性包装器"><a href="#属性包装器" class="header-anchor">#</a> 属性包装器</h3> <p>属性包装器简单来说就是一套模板，通过这个模板，快速设置属性的set、get方法。确实非常强大。</p> <p>关键字：<code>@propertyWrapper</code>、<code>wrappedValue</code></p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token attribute atrule">@propertyWrapper</span>
+<span class="token keyword">struct</span> <span class="token class-name">ConsoleSetLog</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">var</span> number<span class="token punctuation">:</span> <span class="token class-name">Int</span>
+    <span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">self</span><span class="token punctuation">.</span>number <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+    <span class="token comment">//通过 wrappedValue 来声明模板</span>
+    <span class="token keyword">var</span> wrappedValue<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+        <span class="token keyword">get</span> <span class="token punctuation">{</span>   <span class="token keyword">return</span> number   <span class="token punctuation">}</span>
+        <span class="token keyword">set</span> <span class="token punctuation">{</span>
+            number <span class="token operator">=</span> newValue
+            <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;This is a set of porperty wrapper&quot;</span></span><span class="token punctuation">)</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">//Wrapper内也可实现函数等</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;Foo&quot;</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">TestPropertyWrapper</span> <span class="token punctuation">{</span>
+    <span class="token attribute atrule">@ConsoleSetLog</span> <span class="token keyword">var</span> one <span class="token punctuation">:</span> <span class="token class-name">Int</span><span class="token punctuation">;</span>		<span class="token comment">//one通过属性包装器自动获得 对应 get、set方法</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> test <span class="token operator">=</span> <span class="token class-name">TestPropertyWrapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+test<span class="token punctuation">.</span>one <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="初始值"><a href="#初始值" class="header-anchor">#</a> 初始值</h4> <p>设置被包装属性的初始值有三种方法：</p> <ul><li>在构造函数内赋初值</li> <li>在属性包装器内，实现对应构造函数，声明可直接赋值</li> <li>在属性包装器内，实现对应构造函数，声明可实现自定义特性</li></ul> <p><strong>在构造函数内赋初值</strong></p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token attribute atrule">@propertyWrapper</span>
+<span class="token keyword">struct</span> <span class="token class-name">TwelveOrLess</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> number<span class="token punctuation">:</span> <span class="token class-name">Int</span>
+    <span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">self</span><span class="token punctuation">.</span>number <span class="token operator">=</span> <span class="token number">1</span> <span class="token punctuation">}</span>
+    
+    
+    <span class="token keyword">var</span> wrappedValue<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+        <span class="token keyword">get</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> number <span class="token punctuation">}</span>
+        <span class="token keyword">set</span> <span class="token punctuation">{</span> number <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">SmallRectangle</span> <span class="token punctuation">{</span>
+    <span class="token attribute atrule">@TwelveOrLess</span> <span class="token keyword">var</span> height <span class="token punctuation">:</span> <span class="token class-name">Int</span>
+    <span class="token attribute atrule">@TwelveOrLess</span> <span class="token keyword">var</span> width <span class="token punctuation">:</span> <span class="token class-name">Int</span>
+    
+    
+    <span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token number">2</span>		<span class="token comment">//在构造器内直接对变量赋值</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>在属性包装器内，实现对应构造函数，声明可直接赋值，或实现自定义特性</strong></p> <div class="language-swift extra-class"><pre class="language-swift"><code>
+<span class="token attribute atrule">@propertyWrapper</span>
+<span class="token keyword">struct</span> <span class="token class-name">SmallNumber</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">var</span> maximum<span class="token punctuation">:</span> <span class="token class-name">Int</span>
+    <span class="token keyword">private</span> <span class="token keyword">var</span> number<span class="token punctuation">:</span> <span class="token class-name">Int</span>
+
+    <span class="token keyword">var</span> wrappedValue<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+        <span class="token keyword">get</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> number <span class="token punctuation">}</span>
+        <span class="token keyword">set</span> <span class="token punctuation">{</span> number <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> maximum<span class="token punctuation">)</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+  	<span class="token comment">//默认构造器</span>
+    <span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        maximum <span class="token operator">=</span> <span class="token number">12</span>
+        number <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span>
+  
+ 		<span class="token comment">//@SmallNumber var height: Int = 1 时调用</span>
+    <span class="token keyword">init</span><span class="token punctuation">(</span>wrappedValue<span class="token punctuation">:</span> <span class="token class-name">Int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        maximum <span class="token operator">=</span> <span class="token number">12</span>
+        number <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>wrappedValue<span class="token punctuation">,</span> maximum<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  
+  	<span class="token comment">//@SmallNumber(wrappedValue: 2, maximum: 5) var height: Int 时调用</span>
+    <span class="token keyword">init</span><span class="token punctuation">(</span>wrappedValue<span class="token punctuation">:</span> <span class="token class-name">Int</span><span class="token punctuation">,</span> maximum<span class="token punctuation">:</span> <span class="token class-name">Int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span>maximum <span class="token operator">=</span> maximum
+        number <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>wrappedValue<span class="token punctuation">,</span> maximum<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">struct</span> <span class="token class-name">UnitRectangle</span> <span class="token punctuation">{</span>
+    <span class="token attribute atrule">@SmallNumber</span> <span class="token keyword">var</span> height<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token operator">=</span> <span class="token number">1</span>		<span class="token comment">//调用 init(wrappedValue: Int)  构造器</span>
+    <span class="token attribute atrule">@SmallNumber</span> <span class="token keyword">var</span> width<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token operator">=</span> <span class="token number">1</span>			<span class="token comment">//也会调用 init(wrappedValue: Int)  构造器</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">NarrowRectangle</span> <span class="token punctuation">{</span>
+    <span class="token attribute atrule">@SmallNumber</span><span class="token punctuation">(</span>wrappedValue<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> maximum<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token keyword">var</span> height<span class="token punctuation">:</span> <span class="token class-name">Int</span>	<span class="token comment">//调用 init(wrappedValue: Int, maximum: Int) 构造器</span>
+    <span class="token attribute atrule">@SmallNumber</span><span class="token punctuation">(</span>wrappedValue<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> maximum<span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token keyword">var</span> width<span class="token punctuation">:</span> <span class="token class-name">Int</span>	<span class="token comment">//也会调用 init(wrappedValue: Int, maximum: Int) 构造器</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="呈现值"><a href="#呈现值" class="header-anchor">#</a> 呈现值</h4> <p>属性包装器可以呈现一个值。</p> <p>关键词：<code>$</code></p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token attribute atrule">@propertyWrapper</span>
+<span class="token keyword">struct</span> <span class="token class-name">SmallNumber</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">var</span> number<span class="token punctuation">:</span> <span class="token class-name">Int</span>
+    <span class="token keyword">var</span> projectedValue<span class="token punctuation">:</span> <span class="token class-name">Bool</span>
+    <span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span>number <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span>projectedValue <span class="token operator">=</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> wrappedValue<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+        <span class="token keyword">get</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> number <span class="token punctuation">}</span>
+        <span class="token keyword">set</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> newValue <span class="token operator">&gt;</span> <span class="token number">12</span> <span class="token punctuation">{</span>
+                number <span class="token operator">=</span> <span class="token number">12</span>
+                projectedValue <span class="token operator">=</span> <span class="token boolean">true</span>			<span class="token comment">//呈现值</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                number <span class="token operator">=</span> newValue
+                projectedValue <span class="token operator">=</span> <span class="token boolean">false</span>		<span class="token comment">//呈现值</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">struct</span> <span class="token class-name">SomeStructure</span> <span class="token punctuation">{</span>
+    <span class="token attribute atrule">@SmallNumber</span> <span class="token keyword">var</span> someNumber<span class="token punctuation">:</span> <span class="token class-name">Int</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> someStructure <span class="token operator">=</span> <span class="token class-name">SomeStructure</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+someStructure<span class="token punctuation">.</span>someNumber <span class="token operator">=</span> <span class="token number">4</span>
+<span class="token function">print</span><span class="token punctuation">(</span>someStructure<span class="token punctuation">.</span>$someNumber<span class="token punctuation">)</span>				<span class="token comment">//使用$符号，访问呈现值</span>
+<span class="token comment">// 打印 &quot;false&quot;</span>
+
+someStructure<span class="token punctuation">.</span>someNumber <span class="token operator">=</span> <span class="token number">55</span>
+<span class="token function">print</span><span class="token punctuation">(</span>someStructure<span class="token punctuation">.</span>$someNumber<span class="token punctuation">)</span>				<span class="token comment">//使用$符号，访问呈现值</span>
+<span class="token comment">// 打印 &quot;true&quot;</span>
+</code></pre></div><h3 id="全局变量和局部变量"><a href="#全局变量和局部变量" class="header-anchor">#</a> 全局变量和局部变量</h3> <p>全局变量是在函数、方法、闭包或任何类型之外定义的变量。局部变量是在函数、方法或闭包内部定义的变量。</p> <ul><li>全局变量或局部变量可以定义为计算型变量</li> <li>全局变量或局部变量可以为存储型变量定义观察器</li> <li>全局的常量或变量都是延迟计算的，不需要lazy修饰</li> <li>局部范围的常量和变量从不延迟计算</li></ul> <h3 id="类型属性"><a href="#类型属性" class="header-anchor">#</a> 类型属性</h3> <p>类型属性也很好理解，就是类属性，独立于实例外，属于类。<strong>first-class都可以有类型属性。</strong></p> <ul><li>关键字：<code>static</code>、<code>class</code></li> <li>类属性必须为存储型类型属性指定默认值。</li> <li>在为类定义计算型类型属性时，可以改用关键字 class 来支持子类对父类的实现进行重写。</li></ul> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">class</span> <span class="token class-name">SomeClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">var</span> storedTypeProperty <span class="token operator">=</span> <span class="token string-literal"><span class="token string">&quot;Some value.&quot;</span></span>		<span class="token comment">//类存储属性</span>
+    <span class="token keyword">static</span> <span class="token keyword">var</span> computedTypeProperty<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>					<span class="token comment">//类计算属性</span>
+        <span class="token keyword">return</span> <span class="token number">27</span>
+    <span class="token punctuation">}</span>
+  
+  	<span class="token comment">//用 class 声明，该 类计算属性 支持被子类重写</span>
+    <span class="token keyword">class</span> <span class="token keyword">var</span> overrideableComputedTypeProperty<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">107</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="方法"><a href="#方法" class="header-anchor">#</a> 方法</h2> <h3 id="结构体和枚举"><a href="#结构体和枚举" class="header-anchor">#</a> 结构体和枚举</h3> <p>结构体和枚举是值类型。默认情况下，值类型的属性不能在它的实例方法中被修改。可使用  mutating 关键字，让方法可以修改实例的方法。原理是会重新生成一个结构体赋值给这个实例的self</p> <ul><li>关键字：<code>mutating</code></li></ul> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token comment">//错误示例</span>
+<span class="token keyword">struct</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">0.0</span>
+  
+  	<span class="token comment">//这种写法会报错，因为结构体和枚举内，属性不能被示例方法修改</span>
+    muta <span class="token keyword">func</span> <span class="token function-definition function">moveBy</span><span class="token punctuation">(</span>x deltaX<span class="token punctuation">:</span> <span class="token class-name">Double</span><span class="token punctuation">,</span> y deltaY<span class="token punctuation">:</span> <span class="token class-name">Double</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        x <span class="token operator">+=</span> deltaX
+        y <span class="token operator">+=</span> deltaY
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//正确示例</span>
+<span class="token keyword">struct</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">0.0</span>
+    <span class="token keyword">mutating</span> <span class="token function">moveBy</span><span class="token punctuation">(</span>x deltaX<span class="token punctuation">:</span> <span class="token class-name">Double</span><span class="token punctuation">,</span> y deltaY<span class="token punctuation">:</span> <span class="token class-name">Double</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        x <span class="token operator">+=</span> deltaX
+        y <span class="token operator">+=</span> deltaY
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="类方法"><a href="#类方法" class="header-anchor">#</a> 类方法</h3> <p>关键字：<code>static</code>、<code>class</code></p> <p>在方法的 func 关键字之前加上关键字 static，来指定类型方法。类还可以用关键字 class 来指定，从而允许子类重写父类该方法的实现，与属性的定义相同。</p> <p><strong>First-class都可以有类方法。</strong></p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">class</span> <span class="token class-name">SomeClass</span> <span class="token punctuation">{</span>
+    <span class="token comment">//类变量</span>
+    <span class="token keyword">static</span> <span class="token keyword">var</span> highestUnlockedLevel <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token comment">//类方法</span>
+    <span class="token keyword">static</span> <span class="token keyword">func</span> <span class="token function-definition function">someClassFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        
+    <span class="token punctuation">}</span>
+    <span class="token comment">//可重写父类的类方法</span>
+    <span class="token keyword">class</span> <span class="token keyword">func</span> <span class="token function-definition function">someSubMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="下标"><a href="#下标" class="header-anchor">#</a> 下标</h2> <p>关键字：<code>subscript</code></p> <p>可通过 subscript 对枚举、结构体、类定义下标，使用类似数组下标访问的方式对 枚举、结构体、类 进行快捷访问。</p> <p>下标的定义方法类似计算属性，使用到了<code>get</code>、<code>set</code>，这块与计算属性相同</p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">struct</span> <span class="token class-name">TestSubscript</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> object <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token class-name">String</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string-literal"><span class="token string">&quot;one&quot;</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">&quot;two&quot;</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">&quot;Three&quot;</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">&quot;Four&quot;</span></span><span class="token punctuation">]</span>
+    
+  	<span class="token comment">//定义下标</span>
+    <span class="token keyword">subscript</span><span class="token punctuation">(</span>index <span class="token punctuation">:</span><span class="token class-name">Int</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">String</span><span class="token operator">?</span> <span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> index <span class="token operator">&lt;</span> object<span class="token punctuation">.</span>count <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> object<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token nil constant">nil</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">set</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> index <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> index <span class="token operator">&lt;</span> object<span class="token punctuation">.</span>count <span class="token punctuation">{</span>
+                object<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> newValue<span class="token operator">!</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> test <span class="token operator">=</span> <span class="token class-name">TestSubscript</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token class-name">TestSubscript</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//通过下标访问</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token class-name">TestSubscript</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//通过下标访问</span>
+</code></pre></div><p><strong>注：下标的入参和出参个数不限，类型不限。</strong></p> <h3 id="类型下标"><a href="#类型下标" class="header-anchor">#</a> 类型下标</h3> <p>关键字：<code>static</code>、<code>class</code></p> <p><strong>First-class都可以有类型下标(<code>class</code>关键字为类独有）</strong></p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">enum</span> <span class="token class-name">Planet</span><span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> mercury <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> venus<span class="token punctuation">,</span> earth<span class="token punctuation">,</span> mars<span class="token punctuation">,</span> jupiter<span class="token punctuation">,</span> saturn<span class="token punctuation">,</span> uranus<span class="token punctuation">,</span> neptune
+    <span class="token keyword">static</span> <span class="token keyword">subscript</span><span class="token punctuation">(</span>n<span class="token punctuation">:</span> <span class="token class-name">Int</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Planet</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Planet</span><span class="token punctuation">(</span>rawValue<span class="token punctuation">:</span> n<span class="token punctuation">)</span><span class="token operator">!</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> mars <span class="token operator">=</span> <span class="token class-name">Planet</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span>
+<span class="token function">print</span><span class="token punctuation">(</span>mars<span class="token punctuation">)</span>
+</code></pre></div><h2 id="继承"><a href="#继承" class="header-anchor">#</a> 继承</h2> <p>只有类才有继承特性，结构体和枚举没有。</p> <p>关键字：<code>override</code>、<code>final</code>、<code>super</code></p> <ul><li>使用<code>override</code>，重写父类 方法、属性、观察器属性、下标等</li> <li>使用<code>final</code>，防止类、方法、属性、观察器、下标被重写，例如：<code>final var</code>、<code>final func</code>、f<code>inal class</code> 以及 <code>final subscript</code></li> <li>使用<code>super</code>，访问父类 方法、属性、下标等。</li></ul> <h2 id="构造过程"><a href="#构造过程" class="header-anchor">#</a> 构造过程</h2> <h3 id="多态"><a href="#多态" class="header-anchor">#</a> 多态</h3> <p>面对对象的三大特性：继承、封装、多态。</p> <p><strong>多态的定义：相同的行为，不同的实现。</strong></p> <p>多态的理解，可以从两方面：</p> <ul><li>静态多态，方法重载和方法重写
+<ul><li>方法重载，方法名相同，参数不同</li> <li>方法重写，子类重写父类方法</li></ul></li> <li>动态多态，代码中使用基类代替多个具体的子类，更加抽象化。</li></ul> <h3 id="构造基本形式"><a href="#构造基本形式" class="header-anchor">#</a> 构造基本形式</h3> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在此处执行构造过程，为所有变量初始化值</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>注意点</strong></p> <ul><li><p>Optional类型可以自动初始化为nil</p></li> <li><p>let常量只能在构造函数中初始化一次</p></li> <li><p>如果所有变量定义时就已赋初值，则会自动创建默认构造函数</p></li> <li><p>通过闭包或全局函数设置属性的默认值</p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">class</span> <span class="token class-name">SomeClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> someProperty<span class="token punctuation">:</span> <span class="token class-name">SomeType</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 在这个闭包中给 someProperty 创建一个默认值</span>
+        <span class="token comment">// someValue 必须和 SomeType 类型相同</span>
+        <span class="token keyword">return</span> someValue
+    <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>结构体逐一成员构造器（memberwise initializer)，当没有显示指定构造器时，结构体会自动获得一个逐一成员构造器。一旦有自定义构造器，则逐一成员构造器失效</p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">struct</span> <span class="token class-name">Size</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> width <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">,</span> height <span class="token operator">=</span> <span class="token number">0.0</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//memberwise initializer</span>
+<span class="token keyword">let</span> twoByTwo <span class="token operator">=</span> <span class="token class-name">Size</span><span class="token punctuation">(</span>width<span class="token punctuation">:</span> <span class="token number">2.0</span><span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">2.0</span><span class="token punctuation">)</span>
+</code></pre></div></li></ul> <h3 id="值类型的构造器-枚举或结构体"><a href="#值类型的构造器-枚举或结构体" class="header-anchor">#</a> 值类型的构造器（枚举或结构体）</h3> <ul><li>值类型构造器只能代理到自身其他构造器里，<strong>不存在便利构造器</strong></li> <li>如果你为某个值类型定义了一个自定义的构造器，你将无法访问到默认构造器（如果是结构体，还将无法访问逐一成员构造器）。但是在extension写自定义构造器，则可以规避这个问题。</li></ul> <h3 id="类的构造器"><a href="#类的构造器" class="header-anchor">#</a> 类的构造器</h3> <p>关键字：<code>init</code>、<code>convenience</code></p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token comment">//指定构造器</span>
+<span class="token keyword">init</span><span class="token punctuation">(</span>parameters<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    statements
+<span class="token punctuation">}</span>
+
+<span class="token comment">//便利构造器</span>
+<span class="token keyword">convenience</span> <span class="token keyword">init</span><span class="token punctuation">(</span>parameters<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    statements
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="构造器代理"><a href="#构造器代理" class="header-anchor">#</a> 构造器代理</h4> <p>构造器代理调用的三条规则</p> <ul><li>规则 1 指定构造器必须调用其直接父类的的指定构造器。</li> <li>规则 2 便利构造器必须调用同类中定义的其它构造器。</li> <li>规则 3 便利构造器最后必须调用指定构造器。</li></ul> <p>即，<strong>指定构造器必须总是向上代理，便利构造器必须总是横向代理</strong></p> <img src="/assets/img/initRuler.800701e0.png" style="zoom:50%;"> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">class</span> <span class="token class-name">Food</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> name<span class="token punctuation">:</span> <span class="token class-name">String</span>
+  
+  	<span class="token comment">//指定构造器，可以有多个</span>
+    <span class="token keyword">init</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+    <span class="token punctuation">}</span>
+  
+  	<span class="token comment">//便利构造器，可以有多个，可以代理到其他遍历构造器，但最有一个便利构造器一定要代理到指定构造器上</span>
+    <span class="token keyword">convenience</span> <span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">&quot;[Unnamed]&quot;</span></span><span class="token punctuation">)</span>		<span class="token comment">//代理到 指定构造器 init(name: String)</span>
+    <span class="token punctuation">}</span>
+  
+    <span class="token keyword">convenience</span> <span class="token keyword">init</span><span class="token punctuation">(</span>other<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span>			<span class="token comment">//代理到 便利构造器 convenience init() </span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="两段式构造过程"><a href="#两段式构造过程" class="header-anchor">#</a> 两段式构造过程</h4> <div class="language-swift extra-class"><pre class="language-swift"><code>    
+<span class="token comment">//两段式构造过程</span>
+<span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      
+       <span class="token comment">//这里是第一阶段，类中的每个存储型属性赋一个初始值，这个阶段是从子类往父类层层调用</span>
+        a1 <span class="token operator">=</span> <span class="token string-literal"><span class="token string">&quot;test&quot;</span></span>
+        a2 <span class="token operator">=</span> <span class="token number">4</span>
+
+
+        
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span>b<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">&quot;2&quot;</span></span><span class="token punctuation">)</span>
+
+        <span class="token comment">//这里是第二阶段，它给每个类一次机会，在新实例准备使用之前进一步自定义它们的存储型属性，这个阶段是父类往子类层层调用</span>
+        b1 <span class="token operator">=</span> <span class="token string-literal"><span class="token string">&quot;3&quot;</span></span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span><span class="token function">testFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+<span class="token comment">//如果子类的构造器没有在阶段 2 过程中做自定义操作，并且父类有一个无参数的指定构造器，你可以在所有子类的存储属性赋值之后省略 super.init() 的调用</span>
+<span class="token keyword">init</span><span class="token punctuation">(</span>origin<span class="token punctuation">:</span> <span class="token class-name">Point</span><span class="token punctuation">,</span> size<span class="token punctuation">:</span> <span class="token class-name">Size</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">self</span><span class="token punctuation">.</span>origin <span class="token operator">=</span> origin
+    <span class="token keyword">self</span><span class="token punctuation">.</span>size <span class="token operator">=</span> size
+  	
+  	<span class="token comment">//省略 super.init() 的调用</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="构造器的继承和重写"><a href="#构造器的继承和重写" class="header-anchor">#</a> 构造器的继承和重写</h4> <ul><li>默认情况下，Swift 中的子类默认情况下不会继承父类的构造器</li> <li>需要重写父类构造器时，必须跟函数一样，显式使用 <code>override</code></li></ul> <p><strong>子类自动继承父类构造器的情况</strong></p> <ul><li><p>规则 1,<strong>如果子类没有定义任何指定构造器</strong>，<strong>它将自动继承父类所有的指定构造器</strong>。</p></li> <li><p>规则 2，<strong>如果子类提供了所有父类指定构造器的实现</strong>——无论是通过规则 1 继承过来的，还是提供了自定义实现——<strong>它将自动继承父类所有的便利构造器</strong>。</p> <img src="/assets/img/initializersInherit.08961575.png" style="zoom:50%;"></li></ul> <p>图中，由于子类提供了所有父类指定构造器的实现，所以自动继承了Food类的便利构造器</p> <h4 id="必要构造器"><a href="#必要构造器" class="header-anchor">#</a> 必要构造器</h4> <p>关键字：<code>required</code></p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">class</span> <span class="token class-name">SomeClass</span> <span class="token punctuation">{</span>
+  	<span class="token comment">//声明子类必须重写该构造器，且子类不需要使用override</span>
+    <span class="token keyword">required</span> <span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="可失败构造器"><a href="#可失败构造器" class="header-anchor">#</a> 可失败构造器</h3> <p>构造器存才返回nil的情况，则可创建<strong>可失败构造器</strong></p> <p>基本形式：<code>init?</code>、init!</p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">struct</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> species<span class="token punctuation">:</span> <span class="token class-name">String</span>
+  
+  	<span class="token comment">//可失败构造器</span>
+    <span class="token keyword">init</span><span class="token operator">?</span><span class="token punctuation">(</span>species<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> species<span class="token punctuation">.</span>isEmpty <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token nil constant">nil</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span>species <span class="token operator">=</span> species
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//init!</span>
+<span class="token keyword">init</span><span class="token operator">!</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token comment">//一旦 init! 构造失败，则会触发一个断言</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="析构过程"><a href="#析构过程" class="header-anchor">#</a> 析构过程</h2> <p>关键字：<code>deinit</code></p> <p>只有类才有析构过程。</p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token keyword">deinit</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 执行析构过程</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="扩展"><a href="#扩展" class="header-anchor">#</a> 扩展</h2> <h3 id="基本定义-2"><a href="#基本定义-2" class="header-anchor">#</a> 基本定义</h3> <p>关键字：<code>extension</code></p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token comment">//扩展基本格式，Swift中扩展不需要写名字</span>
+<span class="token keyword">extension</span> <span class="token class-name">SomeType</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 在这里给 SomeType 添加新的功能</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//增加协议</span>
+<span class="token keyword">extension</span> <span class="token class-name">SomeType</span><span class="token punctuation">:</span> <span class="token class-name">SomeProtocol</span><span class="token punctuation">,</span> <span class="token class-name">AnotherProtocol</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 协议所需要的实现写在这里</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Swift中可以对 **枚举、结构体、类、协议 **进行扩展，功能非常强大，可以直接能加实例变量等，几乎无所不能。</p> <p><strong>可扩展的点：</strong></p> <ul><li>添加计算型实例属性和计算型类属性</li> <li>定义实例方法和类方法</li> <li>提供新的构造器</li> <li>定义下标</li> <li>定义和使用新的嵌套类型</li> <li>使已经存在的类型遵循（conform）一个协议</li></ul> <p><strong>不能扩展的点：</strong></p> <ul><li>不能重写已经存在的功能</li> <li>不能添加存储属性</li> <li>**不能给类添加新的指定构造器或析构器，这些必须由原始类实现，只能添加新的便利构造器。**但对于值类型（枚举、结构体），可以添加指定构造器（值类型不存在便利构造器）。</li></ul> <h2 id="协议"><a href="#协议" class="header-anchor">#</a> 协议</h2> <p>Swift中协议，可以声明 方法、属性，此外还有一些细节注意点</p> <h3 id="基本格式"><a href="#基本格式" class="header-anchor">#</a> 基本格式</h3> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token comment">//定义一个协议</span>
+<span class="token keyword">protocol</span> <span class="token class-name">FirstProtocol</span> <span class="token punctuation">{</span>
+  
+<span class="token punctuation">}</span>
+
+<span class="token keyword">protocol</span> <span class="token class-name">SomeProtocol</span> <span class="token punctuation">{</span>
+    
+  	<span class="token comment">//声明属性（存储属性或计算属性），必须指定可读可写</span>
+    <span class="token keyword">var</span> mustBeSettable<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span> <span class="token keyword">get</span> <span class="token keyword">set</span> <span class="token punctuation">}</span>					<span class="token comment">//可读可写</span>
+    <span class="token keyword">var</span> doesNotNeedToBeSettable<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span> <span class="token keyword">get</span> <span class="token punctuation">}</span>		<span class="token comment">//可读，只要满足可读要求即可，非只读</span>
+  
+  	<span class="token comment">//声明 类属性，需要用到 static 关键字，</span>
+  	<span class="token keyword">static</span> <span class="token keyword">var</span> someTypeProperty<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span> <span class="token keyword">get</span> <span class="token keyword">set</span> <span class="token punctuation">}</span>
+    <span class="token keyword">static</span> <span class="token keyword">var</span> someTypeProperty_2<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span> <span class="token keyword">get</span> <span class="token keyword">set</span> <span class="token punctuation">}</span>
+  
+  	<span class="token comment">//声明 类方法</span>
+  	<span class="token keyword">static</span> <span class="token keyword">func</span> <span class="token function-definition function">someTypeFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  
+  	<span class="token comment">//声明 mutating 方法，用于结构体或枚举中该方法修改自身值，必须使用 mutating 关键字，否则对应实现无法修改自身属性</span>
+    <span class="token keyword">mutating</span> <span class="token keyword">func</span> <span class="token function-definition function">toggle</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  
+  	<span class="token comment">//声明 构造器，实现类必须 用required关键字</span>
+  	<span class="token keyword">init</span><span class="token punctuation">(</span>someParameter<span class="token punctuation">:</span> <span class="token class-name">Int</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//实现协议的方法，（先写继承类，后写协议）</span>
+<span class="token keyword">class</span> <span class="token class-name">SomeClass</span><span class="token punctuation">:</span> <span class="token class-name">SuperClass</span><span class="token punctuation">,</span> <span class="token class-name">FirstProtocol</span><span class="token punctuation">,</span> <span class="token class-name">SomeProtocol</span> <span class="token punctuation">{</span>
+  
+  	<span class="token comment">//存储属性实现（也可用计算属性方式实现）</span>
+  	<span class="token keyword">var</span> mustBeSettable<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token operator">=</span> <span class="token number">0</span>
+  	
+  	<span class="token comment">//计算属性实现（也可用存储属性方式实现）</span>
+    <span class="token keyword">var</span> doesNotNeedToBeSettable<span class="token punctuation">:</span> <span class="token class-name">Int</span><span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">1</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">set</span><span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  
+  	<span class="token comment">//类属性实现</span>
+    <span class="token keyword">static</span> <span class="token keyword">var</span> someTypeProperty<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token operator">=</span> <span class="token number">2</span>		<span class="token comment">//存储属性只能用static</span>
+  	<span class="token comment">//类计算属性可以用 static 或 class</span>
+    <span class="token keyword">class</span> <span class="token keyword">var</span> someTypeProperty_2<span class="token punctuation">:</span> <span class="token class-name">Int</span><span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">1</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">set</span><span class="token punctuation">{</span>
+            
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    
+  	<span class="token comment">//实现 类方法，可用 static 或 class</span>
+    <span class="token keyword">static</span> <span class="token keyword">func</span> <span class="token function-definition function">someTypeFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Void</span><span class="token punctuation">{</span>
+        
+    <span class="token punctuation">}</span>
+  
+  	<span class="token comment">//实现 构造器，必须 用required 关键字</span>
+    <span class="token keyword">required</span> <span class="token keyword">init</span><span class="token punctuation">(</span>someParameter<span class="token punctuation">:</span> <span class="token class-name">Int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        
+    <span class="token punctuation">}</span>
+  
+  	<span class="token comment">//协议合成，关键字 &amp; ，变量 para 需要同时遵守  FirstProtocol 和  SomeProtocol 协议</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">wishHappyBirthday</span><span class="token punctuation">(</span>to para<span class="token punctuation">:</span> <span class="token class-name">FirstProtocol</span> <span class="token operator">&amp;</span> <span class="token class-name">SomeProtocol</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        
+    <span class="token punctuation">}</span>
+  
+  	
+		
+<span class="token punctuation">}</span>
+
+<span class="token comment">//------------------------------------------------ </span>
+<span class="token comment">//定义类专属协议，即只能class实现该协议，必须使用关键字 AnyObject</span>
+<span class="token keyword">protocol</span> <span class="token class-name">SomeClassOnlyProtocol</span><span class="token punctuation">:</span> <span class="token class-name">AnyObject</span> <span class="token punctuation">{</span>
+  
+<span class="token punctuation">}</span>
+
+<span class="token comment">//实现类专属协议，这里只能class实现</span>
+<span class="token keyword">class</span> <span class="token class-name">TestOnlyClass</span> <span class="token punctuation">:</span> <span class="token class-name">SomeClassOnlyProtocol</span> <span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span>
+
+<span class="token comment">//未遵守任何协议</span>
+<span class="token keyword">class</span> <span class="token class-name">TestClassNoProtocl</span> <span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*
+
+判断是否遵守协议，is, as? , as!
+is , 表示是否遵守协议，返回 ture or not
+as? , 如果遵守协议返回 协议的可选值；否则返回nil
+as! , 强制转换为协议类型，如果不遵守该协议，则会触发运行时错误
+
+*/</span>
+<span class="token keyword">class</span> <span class="token class-name">TestIsAs</span> <span class="token punctuation">{</span>
+    
+    <span class="token keyword">func</span> <span class="token function-definition function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> array <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token class-name">AnyObject</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+            <span class="token class-name">TestOnlyClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name">TestClassNoProtocl</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span>
+        
+        <span class="token keyword">for</span> object <span class="token keyword">in</span> array <span class="token punctuation">{</span>
+            
+            <span class="token comment">//is, 表示是否遵守协议，返回 ture or not</span>
+            <span class="token keyword">if</span> object <span class="token keyword">is</span> <span class="token class-name">SomeClassOnlyProtocol</span> <span class="token punctuation">{</span>
+                <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;</span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">object</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string"> is SomeClassOnlyProtocol&quot;</span></span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;</span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">object</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string"> is not SomeClassOnlyProtocol&quot;</span></span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token comment">//as? , 如果遵守协议返回 协议的可选值；否则返回nil</span>
+            <span class="token keyword">if</span> <span class="token keyword">let</span> value <span class="token operator">=</span> <span class="token punctuation">(</span>object <span class="token keyword">as</span><span class="token operator">?</span> <span class="token class-name">SomeClassOnlyProtocol</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//if let 使用了可选绑定对其进行解值，(object as? SomeClassOnlyProtocol) 类型为 Optional&lt;SomeClassOnlyProtocol&gt;</span>
+                <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;</span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">value</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string"> is SomeClassOnlyProtocol&quot;</span></span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;</span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">object</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string"> is not SomeClassOnlyProtocol&quot;</span></span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token comment">//as! , 强制转换为协议类型，如果不遵守该协议，则会触发运行时错误</span>
+            <span class="token keyword">let</span> value <span class="token operator">=</span> object <span class="token keyword">as</span><span class="token operator">!</span> <span class="token class-name">SomeClassOnlyProtocol</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+            
+        <span class="token punctuation">}</span>
+        
+        
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="扩展-2"><a href="#扩展-2" class="header-anchor">#</a> 扩展</h3> <div class="language-swift extra-class"><pre class="language-swift"><code>
+<span class="token keyword">protocol</span> <span class="token class-name">OneProtocol</span> <span class="token punctuation">{</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">one</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">//扩展增加协议实现</span>
+<span class="token keyword">class</span> <span class="token class-name">OneClass</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">extension</span> <span class="token class-name">OneClass</span><span class="token punctuation">:</span> <span class="token class-name">OneProtocol</span><span class="token punctuation">{</span>
+   <span class="token keyword">func</span> <span class="token function-definition function">one</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//类 和 扩展 均可放置实现 和 声明，有一点需要注意，即使满足了协议的所有要求，类型也不会自动遵循协议，必须显式地遵循协议。</span>
+<span class="token keyword">class</span> <span class="token class-name">TwoClass</span><span class="token punctuation">:</span> <span class="token class-name">OneProtocol</span><span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+<span class="token keyword">extension</span> <span class="token class-name">TwoClass</span><span class="token punctuation">{</span>
+    <span class="token comment">//实现 放到扩展中</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">one</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">ThreeClass</span><span class="token punctuation">{</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">one</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">extension</span> <span class="token class-name">ThreeClass</span><span class="token punctuation">:</span> <span class="token class-name">OneProtocol</span><span class="token punctuation">{</span>
+    <span class="token comment">//声明 放到扩展中</span>
+<span class="token punctuation">}</span>
+
+
+
+
+<span class="token comment">//对协议进行扩展，扩展里的方法必须有默认实现</span>
+<span class="token keyword">protocol</span> <span class="token class-name">TwoProtocol</span> <span class="token punctuation">{</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">two</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">extension</span> <span class="token class-name">TwoProtocol</span><span class="token punctuation">{</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">two</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;two&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">//会直接报错，必须有方法实现</span>
+<span class="token comment">//    func three()</span>
+    
+    <span class="token comment">//给协议增加方法，但是必须有默认实现</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">four</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Void</span><span class="token punctuation">{</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;four&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>   
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">FourClass</span><span class="token punctuation">:</span> <span class="token class-name">TwoProtocol</span><span class="token punctuation">{</span>
+    
+    <span class="token comment">//可以不用实现 two(),four() 方法</span>
+    
+    <span class="token comment">//也可以重写默认实现</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">four</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;sss&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">//扩展中的where语句</span>
+
+<span class="token comment">//有条件地遵循协议，只有当 Array 遵守 TextRepresentable 时，才会有该实现</span>
+<span class="token keyword">protocol</span> <span class="token class-name">TextRepresentable</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">extension</span> <span class="token class-name">Array</span><span class="token punctuation">:</span> <span class="token class-name">TextRepresentable</span> <span class="token keyword">where</span> <span class="token class-name">Element</span><span class="token punctuation">:</span> <span class="token class-name">TextRepresentable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;Array - TextRepresentable&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">TestClass</span><span class="token punctuation">:</span> <span class="token class-name">TextRepresentable</span> <span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">AClass</span> <span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span>
+        
+<span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token class-name">TestClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+array<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>		<span class="token comment">//只有array里元素都遵守 TextRepresentable 时，才能调用此方法</span>
+
+
+<span class="token comment">//通过where语句为协议扩展添加限制条件，只有遵循协议的类型满足这些限制条件时，才能获得协议扩展提供的默认实现</span>
+<span class="token keyword">extension</span> <span class="token class-name">Collection</span> <span class="token keyword">where</span> <span class="token class-name">Element</span><span class="token punctuation">:</span> <span class="token class-name">Equatable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">allEqual</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Bool</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> element <span class="token keyword">in</span> <span class="token keyword">self</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> element <span class="token operator">!=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>first <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="可选协议"><a href="#可选协议" class="header-anchor">#</a> 可选协议</h3> <p>Swift中协议里的属性、方法都必须实现，不存在可选的概念。</p> <p>但是作为变通，有两种方法可以实现类似可选的概念</p> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token comment">//第一种方法，使用扩展为协议增加默认实现</span>
+<span class="token keyword">protocol</span> <span class="token class-name">TwoProtocol</span> <span class="token punctuation">{</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">two</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">extension</span> <span class="token class-name">TwoProtocol</span><span class="token punctuation">{</span>
+  	<span class="token comment">//通过扩展，给协议方法增加默认实现</span>
+    <span class="token keyword">func</span> <span class="token function-definition function">two</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">&quot;two&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">TestClass</span><span class="token punctuation">:</span> <span class="token class-name">TextRepresentable</span> <span class="token punctuation">{</span>
+    <span class="token comment">//实现类可不用再实现 func two()</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">//第二种方法，使用 @objc 和 optional 组合，该方法只针对 继承OC的类或者被 @objc标记的类，用于与OC交互时使用，结构体和枚举则不能实现该协议</span>
+<span class="token keyword">import</span> <span class="token class-name">Foundation</span>
+<span class="token attribute atrule">@objc</span> <span class="token keyword">protocol</span> <span class="token class-name">CounterDataSource</span> <span class="token punctuation">{</span>
+    <span class="token attribute atrule">@objc</span> <span class="token keyword">optional</span> <span class="token keyword">func</span> <span class="token function-definition function">increment</span><span class="token punctuation">(</span>forCount count<span class="token punctuation">:</span> <span class="token class-name">Int</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Int</span>
+    <span class="token attribute atrule">@objc</span> <span class="token keyword">optional</span> <span class="token keyword">var</span> fixedIncrement<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span> <span class="token keyword">get</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="嵌套类型"><a href="#嵌套类型" class="header-anchor">#</a> 嵌套类型</h2> <p>Swift 允许你定义嵌套类型，可以在支持的类型中定义嵌套的枚举、类和结构体。即可在枚举、结构体、类中，嵌套定义其他枚举、结构体或类</p></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">9/11/2020, 8:04:08 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/iOS/Swift/SwiftGG/SwiftGG_note_1.html" class="prev">
+          SwiftGG 文档翻译笔记1-基础部分函数闭包
+        </a></span> <span class="next"><a href="/iOS/Swift/SwiftGG/SwiftGG_note_3.html">
+          SwiftGG 文档翻译笔记3-泛型可选连错误处理访问控制等
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-3b069fde data-v-349e681a><li class="level-2" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#枚举" class="sidebar-link reco-side-枚举" data-v-3b069fde>枚举</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#枚举语法" class="sidebar-link reco-side-枚举语法" data-v-3b069fde>枚举语法</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#caseiterable" class="sidebar-link reco-side-caseiterable" data-v-3b069fde>CaseIterable</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#递归枚举" class="sidebar-link reco-side-递归枚举" data-v-3b069fde>递归枚举</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#类和结构体" class="sidebar-link reco-side-类和结构体" data-v-3b069fde>类和结构体</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#相同点" class="sidebar-link reco-side-相同点" data-v-3b069fde>相同点</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#不同点" class="sidebar-link reco-side-不同点" data-v-3b069fde>不同点</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#关于值类型与引用类型" class="sidebar-link reco-side-关于值类型与引用类型" data-v-3b069fde>关于值类型与引用类型：</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#在结构和类之间进行选择" class="sidebar-link reco-side-在结构和类之间进行选择" data-v-3b069fde>在结构和类之间进行选择</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#基本定义" class="sidebar-link reco-side-基本定义" data-v-3b069fde>基本定义</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#指针" class="sidebar-link reco-side-指针" data-v-3b069fde>指针</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#属性" class="sidebar-link reco-side-属性" data-v-3b069fde>属性</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#延时加载存储属性" class="sidebar-link reco-side-延时加载存储属性" data-v-3b069fde>延时加载存储属性</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#计算属性" class="sidebar-link reco-side-计算属性" data-v-3b069fde>计算属性</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#属性观察器" class="sidebar-link reco-side-属性观察器" data-v-3b069fde>属性观察器</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#属性包装器" class="sidebar-link reco-side-属性包装器" data-v-3b069fde>属性包装器</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#全局变量和局部变量" class="sidebar-link reco-side-全局变量和局部变量" data-v-3b069fde>全局变量和局部变量</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#类型属性" class="sidebar-link reco-side-类型属性" data-v-3b069fde>类型属性</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#方法" class="sidebar-link reco-side-方法" data-v-3b069fde>方法</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#结构体和枚举" class="sidebar-link reco-side-结构体和枚举" data-v-3b069fde>结构体和枚举</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#类方法" class="sidebar-link reco-side-类方法" data-v-3b069fde>类方法</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#下标" class="sidebar-link reco-side-下标" data-v-3b069fde>下标</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#类型下标" class="sidebar-link reco-side-类型下标" data-v-3b069fde>类型下标</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#继承" class="sidebar-link reco-side-继承" data-v-3b069fde>继承</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#构造过程" class="sidebar-link reco-side-构造过程" data-v-3b069fde>构造过程</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#多态" class="sidebar-link reco-side-多态" data-v-3b069fde>多态</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#构造基本形式" class="sidebar-link reco-side-构造基本形式" data-v-3b069fde>构造基本形式</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#值类型的构造器-枚举或结构体" class="sidebar-link reco-side-值类型的构造器-枚举或结构体" data-v-3b069fde>值类型的构造器（枚举或结构体）</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#类的构造器" class="sidebar-link reco-side-类的构造器" data-v-3b069fde>类的构造器</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#可失败构造器" class="sidebar-link reco-side-可失败构造器" data-v-3b069fde>可失败构造器</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#析构过程" class="sidebar-link reco-side-析构过程" data-v-3b069fde>析构过程</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#扩展" class="sidebar-link reco-side-扩展" data-v-3b069fde>扩展</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#基本定义-2" class="sidebar-link reco-side-基本定义-2" data-v-3b069fde>基本定义</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#协议" class="sidebar-link reco-side-协议" data-v-3b069fde>协议</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#基本格式" class="sidebar-link reco-side-基本格式" data-v-3b069fde>基本格式</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#扩展-2" class="sidebar-link reco-side-扩展-2" data-v-3b069fde>扩展</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#可选协议" class="sidebar-link reco-side-可选协议" data-v-3b069fde>可选协议</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/Swift/SwiftGG/SwiftGG_note_2.html#嵌套类型" class="sidebar-link reco-side-嵌套类型" data-v-3b069fde>嵌套类型</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-2a01419c data-v-2a01419c><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-2a01419c><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-2a01419c></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-2a01419c></path></svg></div></div></div>
+    <script src="/assets/js/app.3efcfa1f.js" defer></script><script src="/assets/js/3.d41f5393.js" defer></script><script src="/assets/js/1.0d0e82e9.js" defer></script><script src="/assets/js/21.a26b4bf6.js" defer></script>
+  </body>
+</html>

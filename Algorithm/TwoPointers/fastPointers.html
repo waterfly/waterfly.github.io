@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>快慢指针 | WaterFly</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="Just Coding">
+    
+    <link rel="preload" href="/assets/css/0.styles.84748982.css" as="style"><link rel="preload" href="/assets/js/app.3efcfa1f.js" as="script"><link rel="preload" href="/assets/js/3.d41f5393.js" as="script"><link rel="preload" href="/assets/js/1.0d0e82e9.js" as="script"><link rel="preload" href="/assets/js/26.cf0f99d3.js" as="script"><link rel="prefetch" href="/assets/js/10.6a591f7b.js"><link rel="prefetch" href="/assets/js/11.2da2c136.js"><link rel="prefetch" href="/assets/js/12.597e1e9e.js"><link rel="prefetch" href="/assets/js/13.bfe6e49a.js"><link rel="prefetch" href="/assets/js/14.d5101ebe.js"><link rel="prefetch" href="/assets/js/15.d075eb78.js"><link rel="prefetch" href="/assets/js/16.1de846ec.js"><link rel="prefetch" href="/assets/js/17.73e1206f.js"><link rel="prefetch" href="/assets/js/18.3563029d.js"><link rel="prefetch" href="/assets/js/19.018202b6.js"><link rel="prefetch" href="/assets/js/20.92e231d8.js"><link rel="prefetch" href="/assets/js/21.a26b4bf6.js"><link rel="prefetch" href="/assets/js/22.a240a942.js"><link rel="prefetch" href="/assets/js/23.5d73353d.js"><link rel="prefetch" href="/assets/js/24.1a101222.js"><link rel="prefetch" href="/assets/js/25.f7c05ac5.js"><link rel="prefetch" href="/assets/js/27.4412c990.js"><link rel="prefetch" href="/assets/js/28.a9e9a7e1.js"><link rel="prefetch" href="/assets/js/29.9b39ea41.js"><link rel="prefetch" href="/assets/js/30.19dafc01.js"><link rel="prefetch" href="/assets/js/31.9d2c45f0.js"><link rel="prefetch" href="/assets/js/32.f7aa758f.js"><link rel="prefetch" href="/assets/js/33.54518586.js"><link rel="prefetch" href="/assets/js/34.71ab4ffb.js"><link rel="prefetch" href="/assets/js/35.5442dc08.js"><link rel="prefetch" href="/assets/js/36.3d80fb49.js"><link rel="prefetch" href="/assets/js/37.d767afa3.js"><link rel="prefetch" href="/assets/js/38.15d6331f.js"><link rel="prefetch" href="/assets/js/39.a6c25426.js"><link rel="prefetch" href="/assets/js/4.d08f1479.js"><link rel="prefetch" href="/assets/js/40.87d678b9.js"><link rel="prefetch" href="/assets/js/41.edd890b5.js"><link rel="prefetch" href="/assets/js/42.d6677079.js"><link rel="prefetch" href="/assets/js/43.ff4d75ff.js"><link rel="prefetch" href="/assets/js/44.32c7a951.js"><link rel="prefetch" href="/assets/js/45.2c851721.js"><link rel="prefetch" href="/assets/js/46.9bbe5a11.js"><link rel="prefetch" href="/assets/js/47.0e2c36cc.js"><link rel="prefetch" href="/assets/js/48.09bc8442.js"><link rel="prefetch" href="/assets/js/49.52342b74.js"><link rel="prefetch" href="/assets/js/5.9634f48e.js"><link rel="prefetch" href="/assets/js/50.c9e3c4c5.js"><link rel="prefetch" href="/assets/js/51.28a51db9.js"><link rel="prefetch" href="/assets/js/52.58832236.js"><link rel="prefetch" href="/assets/js/53.86af7b76.js"><link rel="prefetch" href="/assets/js/54.973c15bf.js"><link rel="prefetch" href="/assets/js/55.d4a03e12.js"><link rel="prefetch" href="/assets/js/56.ac7e97e0.js"><link rel="prefetch" href="/assets/js/57.7fa14d11.js"><link rel="prefetch" href="/assets/js/58.b0f390b8.js"><link rel="prefetch" href="/assets/js/59.62b96874.js"><link rel="prefetch" href="/assets/js/6.4c543392.js"><link rel="prefetch" href="/assets/js/60.0c40514a.js"><link rel="prefetch" href="/assets/js/61.65259e68.js"><link rel="prefetch" href="/assets/js/62.9fb64114.js"><link rel="prefetch" href="/assets/js/63.3975ffd5.js"><link rel="prefetch" href="/assets/js/64.911d2812.js"><link rel="prefetch" href="/assets/js/65.ce9ab40b.js"><link rel="prefetch" href="/assets/js/66.b89de3df.js"><link rel="prefetch" href="/assets/js/67.4169b86c.js"><link rel="prefetch" href="/assets/js/68.a812ad4b.js"><link rel="prefetch" href="/assets/js/69.b0c76c03.js"><link rel="prefetch" href="/assets/js/7.2aba56aa.js"><link rel="prefetch" href="/assets/js/70.9749f302.js"><link rel="prefetch" href="/assets/js/71.0d38010b.js"><link rel="prefetch" href="/assets/js/72.a6338004.js"><link rel="prefetch" href="/assets/js/73.c1001eb8.js"><link rel="prefetch" href="/assets/js/74.0069037e.js"><link rel="prefetch" href="/assets/js/75.c4591a8d.js"><link rel="prefetch" href="/assets/js/76.e1a3f216.js"><link rel="prefetch" href="/assets/js/77.df0b0aac.js"><link rel="prefetch" href="/assets/js/78.2f535a98.js"><link rel="prefetch" href="/assets/js/79.60e4b9f5.js"><link rel="prefetch" href="/assets/js/8.c5d718a6.js"><link rel="prefetch" href="/assets/js/80.50af71ac.js"><link rel="prefetch" href="/assets/js/81.7d753c90.js"><link rel="prefetch" href="/assets/js/82.5703b0fa.js"><link rel="prefetch" href="/assets/js/83.4af8ebaa.js"><link rel="prefetch" href="/assets/js/84.ed963d52.js"><link rel="prefetch" href="/assets/js/85.7cb175ff.js"><link rel="prefetch" href="/assets/js/86.bd0d1f92.js"><link rel="prefetch" href="/assets/js/87.f00e8426.js"><link rel="prefetch" href="/assets/js/88.a34c0493.js"><link rel="prefetch" href="/assets/js/89.564cb64c.js"><link rel="prefetch" href="/assets/js/9.25143fa3.js"><link rel="prefetch" href="/assets/js/90.ce031d67.js"><link rel="prefetch" href="/assets/js/91.2a75f163.js"><link rel="prefetch" href="/assets/js/92.a2591da3.js"><link rel="prefetch" href="/assets/js/93.6af4f4b0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.84748982.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-349e681a><div data-v-349e681a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-b3e6ef50 data-v-349e681a data-v-349e681a><h3 class="title" data-v-b3e6ef50>WaterFly</h3> <p class="description" data-v-b3e6ef50>Just Coding</p> <label id="box" class="inputBox" data-v-b3e6ef50><input type="password" value="" data-v-b3e6ef50> <span data-v-b3e6ef50>Konck! Knock!</span> <button data-v-b3e6ef50>OK</button></label> <div class="footer" data-v-b3e6ef50><span data-v-b3e6ef50><i class="iconfont reco-theme" data-v-b3e6ef50></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-b3e6ef50>vuePress-theme-reco</a></span> <span data-v-b3e6ef50><i class="iconfont reco-copyright" data-v-b3e6ef50></i> <a data-v-b3e6ef50><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-349e681a><header class="navbar" data-v-349e681a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">WaterFly</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><a href="/Algorithm/" class="nav-link router-link-active"><i class="undefined"></i>
+  算法
+</a></div><div class="nav-item"><a href="/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      iOS
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/Swift/" class="nav-link"><i class="undefined"></i>
+  Swift
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/OC/" class="nav-link"><i class="undefined"></i>
+  OC
+</a></li></ul></div></div><div class="nav-item"><a href="/Other/" class="nav-link"><i class="undefined"></i>
+  Other
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/waterfly" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-349e681a></div> <aside class="sidebar" data-v-349e681a><div class="personal-info-wrapper" data-v-1bfe3fa5 data-v-349e681a><img src="/bike.png" alt="author-avatar" class="personal-img" data-v-1bfe3fa5> <!----> <div class="num" data-v-1bfe3fa5><div data-v-1bfe3fa5><h3 data-v-1bfe3fa5>83</h3> <h6 data-v-1bfe3fa5>Articles</h6></div> <div data-v-1bfe3fa5><h3 data-v-1bfe3fa5>34</h3> <h6 data-v-1bfe3fa5>Tags</h6></div></div> <ul class="social-links" data-v-1bfe3fa5></ul> <hr data-v-1bfe3fa5></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><a href="/Algorithm/" class="nav-link router-link-active"><i class="undefined"></i>
+  算法
+</a></div><div class="nav-item"><a href="/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      iOS
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/Swift/" class="nav-link"><i class="undefined"></i>
+  Swift
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/OC/" class="nav-link"><i class="undefined"></i>
+  OC
+</a></li></ul></div></div><div class="nav-item"><a href="/Other/" class="nav-link"><i class="undefined"></i>
+  Other
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/waterfly" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/Algorithm/" aria-current="page" class="sidebar-link">算法专题总结</a></li><li><a href="/Algorithm/Pattern.html" class="sidebar-link">模式识别</a></li><li><a href="/Algorithm/CodeSnippet.html" class="sidebar-link">CodeSnippet</a></li><li><a href="/Algorithm/LinkedList/LinkedList.html" class="sidebar-link">链表</a></li><li><a href="/Algorithm/BST.html" class="sidebar-link">二叉搜索树</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>二分查找</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>双指针</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Algorithm/TwoPointers/TwoPointers.html" class="sidebar-link">双指针</a></li><li><a href="/Algorithm/TwoPointers/collisionsPointer.html" class="sidebar-link">对撞指针</a></li><li><a href="/Algorithm/TwoPointers/fastPointers.html" aria-current="page" class="active sidebar-link">快慢指针</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>滑动窗口</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-b3e6ef50 data-v-349e681a><h3 class="title" data-v-b3e6ef50></h3> <!----> <label id="box" class="inputBox" data-v-b3e6ef50><input type="password" value="" data-v-b3e6ef50> <span data-v-b3e6ef50>Konck! Knock!</span> <button data-v-b3e6ef50>OK</button></label> <div class="footer" data-v-b3e6ef50><span data-v-b3e6ef50><i class="iconfont reco-theme" data-v-b3e6ef50></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-b3e6ef50>vuePress-theme-reco</a></span> <span data-v-b3e6ef50><i class="iconfont reco-copyright" data-v-b3e6ef50></i> <a data-v-b3e6ef50><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-349e681a><div data-v-349e681a><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">快慢指针</h1> <div data-v-0b291498><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="快慢指针"><a href="#快慢指针" class="header-anchor">#</a> 快慢指针</h1> <p>快慢指针是方向相同，但是不同步的两个指针。解决这类问题的关键是确定两个指针的移动策略，大多数情况，都需要首先确定循环不变量，定义好循环不变量后，这类问题一般能迎刃而解。我们可大致得出以下模式识别：</p> <ul><li>双指针-快慢指针，首先需要定义循环不变量</li></ul> <p>在这个章节中，将重点介绍<code>循环不变量</code>的概念。</p> <p><strong>需要注意的是，<code>循环不变量</code>并不是只针对快慢指针这类题目，只是快慢指针这类题目，尤其需要定义好<code>循环不变量</code>，以免遗漏边界case。</strong></p> <h2 id="图示"><a href="#图示" class="header-anchor">#</a> 图示</h2> <p>这里使用一个动图简要展示快慢指针概念</p> <p><img src="/assets/img/fastPointer.df125871.gif" alt=""></p> <h2 id="循环不变量"><a href="#循环不变量" class="header-anchor">#</a> 循环不变量</h2> <p><code>循环不变量</code>是指我们在编写代码中，要一直保持循环不变的性质。<code>循环不变量</code>需要保证变量在初始化、循环中、循环结束三个阶段都保持性质不变。这是我们写对代码的基础，能够避免边界case异常的问题。</p> <p>双指针中的<code>循环不变量</code>很多时候都指：<strong>变量的区间一直符合初始设置</strong>。比如设定<code>变量i</code>满足 <code>[0, i)</code>区间，那么就需要在<strong>初始化</strong>、<strong>遍历过程</strong>、<strong>循环终止</strong>，<code>变量i</code>都要在<code>[0, i)</code>这个区间都要满足题目要求。即：</p> <blockquote><p><strong>区间不同的定义决定了不同的初始化逻辑、遍历过程中的逻辑。</strong></p></blockquote> <p><code>循环不变量</code>是证明算法有效性的理论依据，也是编码的依据。根据循环不变量就能写对代码。</p> <p><code>循环不变量</code>的核心有两点：</p> <ol><li>定义<code>循环不变量</code>，即对题目要求的那种类型的区间需要定义<code>循环不变量</code></li> <li>设定其区间，设定好初始区间，然后编码中始终按照该区间编码，使变量在三个阶段都满足该定义</li></ol> <p>为了更好的展示<code>循环不变量</code>这个概念，这里用双指针中经典的<strong>删除元素</strong>和<strong>荷兰国旗问题</strong>两类题目来解释。</p> <h3 id="原地删除元素类问题"><a href="#原地删除元素类问题" class="header-anchor">#</a> 原地删除元素类问题</h3> <p>这类问题为需要原地删除特定元素，即不需要额外空间，去调整数组符合题目要求。虽然题目会有变化，但是算法的本质都是一样的。</p> <p>这里用这类问题，核心去阐述在不同定义的<code>循环不变量</code>下编码细节的差异，通过这些差异去感受<code>循环不变量</code>的作用。</p> <h4 id="lc-26-删除有序数组中的重复项"><a href="#lc-26-删除有序数组中的重复项" class="header-anchor">#</a> <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/" target="_blank" rel="noopener noreferrer">LC 26. 删除有序数组中的重复项<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h4> <p>Q：给你一个 <strong>升序排列</strong> 的数组 <code>nums</code> ，请你**<a href="http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank" rel="noopener noreferrer"> 原地<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>** 删除重复出现的元素，使每个元素 <strong>只出现一次</strong> ，返回删除后数组的新长度。元素的 <strong>相对顺序</strong> 应该保持 <strong>一致</strong> 。不要使用额外的空间，你必须在 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank" rel="noopener noreferrer">原地 <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>修改输入数组</strong> 并在使用 O(1) 额外空间的条件下完成。</p> <p>A：先考虑算法，然后重点根据这道题介绍循环不变量的概念。</p> <h5 id="暴力算法"><a href="#暴力算法" class="header-anchor">#</a> 暴力算法</h5> <p>先忽视不使用额外空间的要求，从暴力解法出发。创建一个不重复数组，然后遍历原数组，当元素与不重复数组的最后一个元素不相等时，说明符合条件，加入到不重复数组的最后。注意，该题的暴力解法，即为这类问题的算法本质。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * @param {number[]} nums
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">removeDuplicates</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 暴力解法</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 创建不重复数组</span>
+    <span class="token keyword">const</span> ans <span class="token operator">=</span> <span class="token punctuation">[</span>nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 当数组元素与 不重复数组 的最后一个元素不相等时，由于数组有序，则说明该元素为不重复元素，可加入到不重复数组</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> ans<span class="token punctuation">[</span>ans<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            ans<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 回写到原数组</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> ans<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> ans<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> ans<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="双指针解法"><a href="#双指针解法" class="header-anchor">#</a> 双指针解法</h5> <p>从暴力解法出发，利用原数组<code>nums</code> fast 指针前面的部门，作为不重复数组，即可节省空间，实现空间复杂度O(1)。</p> <p>这里重点介绍循环不变量的概念，对于<code>不重复数组</code>的区间有两种设置：<code>[0,slow)</code> 或 <code>[0, slow]</code>，这个区间就被称为循环不变量。<code>循环不变量</code>设定好后，就需要在<strong>初始定义</strong>、<strong>循环体内</strong>、<strong>结束后</strong> 三部分都满足该定义。即对于<code>变量slow</code>的设置，在初始化、循环体内、结束后三部分都满足设定好的区间。</p> <p>下面对两个区间[0, slow) 和 [0, slow]分别编码，从代码中仔细体会差别。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 区间 [0, slow)，左闭右开区间</span>
+
+<span class="token comment">/**
+ * @param {number[]} nums
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">removeDuplicates</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 双指针，快慢指针</span>
+    <span class="token comment">// 循环不变量，[0, slow) 表示不重复元素的数组</span>
+  
+    <span class="token keyword">let</span> slow <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>		<span class="token comment">// 初始区间 [0, 1)，区间内只有第一个元素，一定是不重复元素数组</span>
+    <span class="token keyword">let</span> fast <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>fast <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>fast<span class="token punctuation">]</span> <span class="token operator">!=</span> nums<span class="token punctuation">[</span>slow <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            nums<span class="token punctuation">[</span>slow<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>fast<span class="token punctuation">]</span><span class="token punctuation">;</span>		<span class="token comment">// [0, slow)， 因此这里直接对 nums[slow] 赋值</span>
+            slow<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        fast<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  
+  	<span class="token comment">// [0, slow) 表示不重复元素的数组，因此返回 slow</span>
+    <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+
+
+<span class="token comment">// 区间  [0, slow]，左闭右闭区间</span>
+
+<span class="token comment">/**
+ * @param {number[]} nums
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">removeDuplicates</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 双指针，快慢指针</span>
+    <span class="token comment">// 循环不变量，[0, slow] 表示不重复元素的数组</span>
+  
+    <span class="token keyword">let</span> slow <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>		<span class="token comment">// 初始区间 [0, 0]，区间内只有第一个元素，一定是不重复元素数组</span>
+    <span class="token keyword">let</span> fast <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>fast <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>fast<span class="token punctuation">]</span> <span class="token operator">!=</span> nums<span class="token punctuation">[</span>slow<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            nums<span class="token punctuation">[</span>slow <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>fast<span class="token punctuation">]</span><span class="token punctuation">;</span>		<span class="token comment">// [0, slow]， 因此这里直接对 slow + 1 赋值，即slow后移，扩大不重复数组</span>
+            slow<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        fast<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  
+  	<span class="token comment">// [0, slow] 表示不重复元素的数组，因此需要返回slow + 1</span>
+    <span class="token keyword">return</span> slow <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="lc-283-移动零"><a href="#lc-283-移动零" class="header-anchor">#</a> <a href="https://leetcode.cn/problems/move-zeroes/" target="_blank" rel="noopener noreferrer">LC 283. 移动零<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h4> <p>Q：给定一个数组 <code>nums</code>，编写一个函数将所有 <code>0</code> 移动到数组的末尾，同时保持非零元素的相对顺序。<strong>请注意</strong> ，必须在不复制数组的情况下原地对数组进行操作。</p> <p>A：移动零是一个很经典的题目，利用双指针，定义好非零数组区间。下面给出不同的非零区间定义对应的代码。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">moveZeroes</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 双指针</span>
+
+    <span class="token comment">// 循环不变量定义，[0, i)为非零区间Ï</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 初始定义 [0, 0)是一个空区间，符合定义</span>
+        <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">// 区间[0,i)，i指向下个元素，因此先赋值后移动</span>
+                <span class="token keyword">let</span> tmp <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            j<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+  
+    <span class="token comment">// 循环不变量定义，[0, i] 为非零区间Ï</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 初始定义 [0, -1] 是一个空区间，符合定义</span>
+        <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                <span class="token comment">// 区间[0,i]，i指向非零区间的最后一个元素，因此先移动后赋值</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+
+                <span class="token keyword">let</span> tmp <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+
+
+            <span class="token punctuation">}</span>
+            j<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="lc-27-移除元素"><a href="#lc-27-移除元素" class="header-anchor">#</a> <a href="https://leetcode.cn/problems/remove-element/" target="_blank" rel="noopener noreferrer">LC 27. 移除元素<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h4> <p>Q：给你一个数组 <code>nums</code> 和一个值 <code>val</code>，你需要 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank" rel="noopener noreferrer">原地<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></strong> 移除所有数值等于 <code>val</code> 的元素，并返回移除后数组的新长度。不要使用额外的数组空间，你必须仅使用 <code>O(1)</code> 额外空间并 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank" rel="noopener noreferrer">原地 <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>修改输入数组</strong>。</p> <p>A：使用双指针，定义好循环不变量，即不包含val的数组区间，下面给出两种区间定义的写法，请体会代码细节的不同。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">removeElement</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums<span class="token punctuation">,</span> val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 双指针</span>
+
+    <span class="token comment">// 循环不变量定义，不包含val的数组区间为 [0,i)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 初始定义区间为[0, 0)，是一个空间区，是符合区间定义的</span>
+        <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            j<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">// 循环不变量定义，不包含val的数组区间为 [0,i]</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 初始定义区间为[0, -1]，是一个空间区，是符合区间定义的</span>
+        <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+        <span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+                nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+            <span class="token punctuation">}</span>
+            j<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="lc-80-删除有序数组中的重复项-ii"><a href="#lc-80-删除有序数组中的重复项-ii" class="header-anchor">#</a> <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/" target="_blank" rel="noopener noreferrer">LC 80. 删除有序数组中的重复项 II<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h4> <p>Q：给你一个有序数组 <code>nums</code> ，请你**<a href="http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank" rel="noopener noreferrer"> 原地<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>** 删除重复出现的元素，使每个元素 <strong>最多出现两次</strong> ，返回删除后数组的新长度。不要使用额外的数组空间，你必须在 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank" rel="noopener noreferrer">原地 <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>修改输入数组</strong> 并在使用 O(1) 额外空间的条件下完成。</p> <p>A：使用双指针，定义好循环不变量，即<strong>元素最多两次的数组区间</strong>。需要注意的是，该题可引申为最多k个重复元素，解法是一样的。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * @param {number[]} nums
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">removeDuplicates</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 双指针</span>
+
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 循环不变量，最多重复两次数组区间 [0, i)</span>
+        <span class="token comment">// 初始定义区间 [0, 3)，区间内有两个元素，是符合定义的</span>
+        <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> j <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> nums<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            j<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 循环不变量，元素最多重复两次数组区间 [0, i]</span>
+        <span class="token comment">// 初始定义区间，[0,1]，区间内有两个元素，是符合定义的。注意 j 的定义，</span>
+        <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> nums<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+                nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            j<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="荷兰国旗问题"><a href="#荷兰国旗问题" class="header-anchor">#</a> 荷兰国旗问题</h3> <p>荷兰国旗问题是双指针中一个经典的题目，请从本题中体会不同的循环不变量定义，对编码细节的差异。</p> <h4 id="lc-75-颜色分类"><a href="#lc-75-颜色分类" class="header-anchor">#</a> <a href="https://leetcode.cn/problems/sort-colors/" target="_blank" rel="noopener noreferrer">LC 75. 颜色分类<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h4> <p>Q：给定一个包含红色、白色和蓝色、共 n 个元素的数组 nums ，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。</p> <p>A：算法核心思路是利用快排的分治思想，利用双指针对数字进行排序，这里我们直接上代码，给出两种不同的循环不变量定义对应的代码，请仔细体会。如果对算法本身有疑惑，可参考力扣该题对应的题解。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">sortColors</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 双指针</span>
+
+
+    <span class="token keyword">const</span> <span class="token function-variable function">swap</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> tmp <span class="token operator">=</span> nums<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        nums<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        nums<span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 循环不变量，0: [0, p0)，1: [p0, i)，2: (p2, n-1]</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 初始区间定义 0: [0, 0)，1: [0, 0)，2: (n-1, n-1] 都 为空区间，是符合定义的</span>
+        <span class="token keyword">const</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">let</span> p0 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> p2 <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 考虑区间 1: [p0, i)，2: (p2, n-1]，对于两个区间 i 都是开区间，因此需要判断 i == p2 的情况</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> p2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">// 红</span>
+                <span class="token function">swap</span><span class="token punctuation">(</span>p0<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                p0<span class="token operator">++</span><span class="token punctuation">;</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token comment">// nums[i] == 2，注意元素交换后，i位置的元素还没遍历过，因此这里不一定i指针</span>
+                <span class="token function">swap</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> p2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                p2<span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 循环不变量，0: [0, p0]，1: (p0, i)，2: [p2, n-1]</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 初始区间定义，0: [0, -1]，1: (-1, 0)，2: [n, n-1]，三个区间都为空区间，是符合区间定义的</span>
+        <span class="token keyword">const</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">let</span> p0 <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> p2 <span class="token operator">=</span> n<span class="token punctuation">;</span>
+        <span class="token comment">// 因为 1: (p0, i)，2: [p2, n-1]，两个区间，一个为右开一个为左闭，因此当 i == p2时，该元素已经确定为2，遍历结束</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> p2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                p0<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token function">swap</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> p0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token comment">// nums[i] == 2</span>
+                p2<span class="token operator">--</span><span class="token punctuation">;</span>
+                <span class="token function">swap</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> p2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h3> <h4 id="lc-674-最长连续递增序列"><a href="#lc-674-最长连续递增序列" class="header-anchor">#</a> <a href="https://leetcode.cn/problems/longest-continuous-increasing-subsequence/" target="_blank" rel="noopener noreferrer">LC 674. 最长连续递增序列<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h4> <p>Q：给定一个未经排序的整数数组，找到最长且 <strong>连续递增的子序列</strong>，并返回该序列的长度。</p> <p>A：使用双指针，当右指针符合递增条件时，序列长度+1，不符合时，移动左指针。</p> <p>本题的<code>循环不变量</code>为<strong>严格递增序列</strong>，对区间有两种定义方式：<code>[left, right]</code> 和 <code>[left ,right)</code> ，下面给出两种区间定义的写法，注意仔细体会细节的不同。算法是一致的，核心就是不同的区间定义，会导致编码细节的不同</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * @param {number[]} nums
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">findLengthOfLCIS</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 双指针</span>
+
+    
+    <span class="token comment">// 循环不变量，严格单调递增区间：[left, right)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 初始定义区间 [0, 0), 初始区间为空区间，是符合单调递增定义的</span>
+        <span class="token keyword">let</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> max <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>right <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>right <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> nums<span class="token punctuation">[</span>right <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                left <span class="token operator">=</span> right<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token comment">// 因为单调递增区间为：[left, right)，所以需要先看到right，所以right++在前</span>
+            right<span class="token operator">++</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// 对于区间 [left, right) 长度为：right - left</span>
+            max <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span> right <span class="token operator">-</span> left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> max<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">// 循环不变量，严格单调递增区间 [left, right]</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 初始区间 [0, 0]，只有一个元素，是符合单调递增定义的</span>
+        <span class="token keyword">let</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> max <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>right <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>right <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> nums<span class="token punctuation">[</span>right <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                left <span class="token operator">=</span> right<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token comment">// 单调递增区间为 [left, right]，因此区间长度为 right - left + 1，且应该先计算区间长度</span>
+            max <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span> right <span class="token operator">-</span> left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// 然后再移动右指针</span>
+            right<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> max<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>最后，需要注意的是，尽量避免使用全程用直觉写代码。直觉能帮我们思考出初始算法，然后需要定义好循环不变量，严格按照循环不变量来编码。下面给出一个错误的答案，下面的答案会遗漏边界case</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 该解法，会对 [2], [2,2,2,2]等边界case 给出错误答案</span>
+<span class="token comment">// 修复的方法也很简单，初始使 max = 1即可，但是这种做法没有定义循环不变量，当问题复杂以后，边界case较多的情况下，很容易出错</span>
+<span class="token keyword">var</span> <span class="token function-variable function">findLengthOfLCIS</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 双指针</span>
+    <span class="token keyword">let</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> right <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> max <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>right <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">&gt;</span> nums<span class="token punctuation">[</span>right <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            max <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span> right <span class="token operator">-</span> left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>ƒ
+            left <span class="token operator">=</span> right<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        right<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> max<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="lc-485-最大连续-1-的个数"><a href="#lc-485-最大连续-1-的个数" class="header-anchor">#</a> <a href="https://leetcode.cn/problems/max-consecutive-ones/" target="_blank" rel="noopener noreferrer">LC 485.最大连续-1-的个数<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h4> <p>Q：给定一个二进制数组 <code>nums</code> ， 计算其中最大连续 <code>1</code> 的个数。</p> <p>A：双指针，快慢指针，核心定义好循环不变量。（这是一道简单题，简单可使用count计数，这里只介绍循环不变量）</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * @param {number[]} nums
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">findMaxConsecutiveOnes</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//双指针，快慢指针</span>
+  <span class="token comment">// 循环不变量：连续为1的区间 [left,right)</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment">// 初始定义为 [0, 0) 空区间，符合区间定义</span>
+    <span class="token keyword">let</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> maxL <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>right <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 区间定义 [left,right)，因此看到nums[right]后就需要让 right++ 移动一位</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>right<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        left <span class="token operator">=</span> right<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment">// 区间定义 [left,right)，区间长度为 right - left</span>
+      maxL <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>maxL<span class="token punctuation">,</span> right <span class="token operator">-</span> left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> maxL<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">// 注意，对于本题 [left, right]区间比较难设计，因为 [0,0]初始区间有一个元素，但是该元素不为空，且不知道该元素的具体值</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">11/9/2022, 5:39:24 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/Algorithm/TwoPointers/collisionsPointer.html" class="prev">
+          对撞指针
+        </a></span> <span class="next"><a href="/Algorithm/TwoPointers/slidingWIndow.html">
+          滑动窗口
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-3b069fde data-v-349e681a><li class="level-2" data-v-3b069fde><a href="/Algorithm/TwoPointers/fastPointers.html#图示" class="sidebar-link reco-side-图示" data-v-3b069fde>图示</a></li><li class="level-2" data-v-3b069fde><a href="/Algorithm/TwoPointers/fastPointers.html#循环不变量" class="sidebar-link reco-side-循环不变量" data-v-3b069fde>循环不变量</a></li><li class="level-3" data-v-3b069fde><a href="/Algorithm/TwoPointers/fastPointers.html#原地删除元素类问题" class="sidebar-link reco-side-原地删除元素类问题" data-v-3b069fde>原地删除元素类问题</a></li><li class="level-3" data-v-3b069fde><a href="/Algorithm/TwoPointers/fastPointers.html#荷兰国旗问题" class="sidebar-link reco-side-荷兰国旗问题" data-v-3b069fde>荷兰国旗问题</a></li><li class="level-3" data-v-3b069fde><a href="/Algorithm/TwoPointers/fastPointers.html#其他" class="sidebar-link reco-side-其他" data-v-3b069fde>其他</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-2a01419c data-v-2a01419c><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-2a01419c><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-2a01419c></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-2a01419c></path></svg></div></div></div>
+    <script src="/assets/js/app.3efcfa1f.js" defer></script><script src="/assets/js/3.d41f5393.js" defer></script><script src="/assets/js/1.0d0e82e9.js" defer></script><script src="/assets/js/26.cf0f99d3.js" defer></script>
+  </body>
+</html>

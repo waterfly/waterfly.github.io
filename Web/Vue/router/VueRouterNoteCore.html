@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue Router 学习笔记-核心 | WaterFly</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="Just Coding">
+    
+    <link rel="preload" href="/assets/css/0.styles.84748982.css" as="style"><link rel="preload" href="/assets/js/app.3efcfa1f.js" as="script"><link rel="preload" href="/assets/js/3.d41f5393.js" as="script"><link rel="preload" href="/assets/js/1.0d0e82e9.js" as="script"><link rel="preload" href="/assets/js/34.71ab4ffb.js" as="script"><link rel="prefetch" href="/assets/js/10.6a591f7b.js"><link rel="prefetch" href="/assets/js/11.2da2c136.js"><link rel="prefetch" href="/assets/js/12.597e1e9e.js"><link rel="prefetch" href="/assets/js/13.bfe6e49a.js"><link rel="prefetch" href="/assets/js/14.d5101ebe.js"><link rel="prefetch" href="/assets/js/15.d075eb78.js"><link rel="prefetch" href="/assets/js/16.1de846ec.js"><link rel="prefetch" href="/assets/js/17.73e1206f.js"><link rel="prefetch" href="/assets/js/18.3563029d.js"><link rel="prefetch" href="/assets/js/19.018202b6.js"><link rel="prefetch" href="/assets/js/20.92e231d8.js"><link rel="prefetch" href="/assets/js/21.a26b4bf6.js"><link rel="prefetch" href="/assets/js/22.a240a942.js"><link rel="prefetch" href="/assets/js/23.5d73353d.js"><link rel="prefetch" href="/assets/js/24.1a101222.js"><link rel="prefetch" href="/assets/js/25.f7c05ac5.js"><link rel="prefetch" href="/assets/js/26.cf0f99d3.js"><link rel="prefetch" href="/assets/js/27.4412c990.js"><link rel="prefetch" href="/assets/js/28.a9e9a7e1.js"><link rel="prefetch" href="/assets/js/29.9b39ea41.js"><link rel="prefetch" href="/assets/js/30.19dafc01.js"><link rel="prefetch" href="/assets/js/31.9d2c45f0.js"><link rel="prefetch" href="/assets/js/32.f7aa758f.js"><link rel="prefetch" href="/assets/js/33.54518586.js"><link rel="prefetch" href="/assets/js/35.5442dc08.js"><link rel="prefetch" href="/assets/js/36.3d80fb49.js"><link rel="prefetch" href="/assets/js/37.d767afa3.js"><link rel="prefetch" href="/assets/js/38.15d6331f.js"><link rel="prefetch" href="/assets/js/39.a6c25426.js"><link rel="prefetch" href="/assets/js/4.d08f1479.js"><link rel="prefetch" href="/assets/js/40.87d678b9.js"><link rel="prefetch" href="/assets/js/41.edd890b5.js"><link rel="prefetch" href="/assets/js/42.d6677079.js"><link rel="prefetch" href="/assets/js/43.ff4d75ff.js"><link rel="prefetch" href="/assets/js/44.32c7a951.js"><link rel="prefetch" href="/assets/js/45.2c851721.js"><link rel="prefetch" href="/assets/js/46.9bbe5a11.js"><link rel="prefetch" href="/assets/js/47.0e2c36cc.js"><link rel="prefetch" href="/assets/js/48.09bc8442.js"><link rel="prefetch" href="/assets/js/49.52342b74.js"><link rel="prefetch" href="/assets/js/5.9634f48e.js"><link rel="prefetch" href="/assets/js/50.c9e3c4c5.js"><link rel="prefetch" href="/assets/js/51.28a51db9.js"><link rel="prefetch" href="/assets/js/52.58832236.js"><link rel="prefetch" href="/assets/js/53.86af7b76.js"><link rel="prefetch" href="/assets/js/54.973c15bf.js"><link rel="prefetch" href="/assets/js/55.d4a03e12.js"><link rel="prefetch" href="/assets/js/56.ac7e97e0.js"><link rel="prefetch" href="/assets/js/57.7fa14d11.js"><link rel="prefetch" href="/assets/js/58.b0f390b8.js"><link rel="prefetch" href="/assets/js/59.62b96874.js"><link rel="prefetch" href="/assets/js/6.4c543392.js"><link rel="prefetch" href="/assets/js/60.0c40514a.js"><link rel="prefetch" href="/assets/js/61.65259e68.js"><link rel="prefetch" href="/assets/js/62.9fb64114.js"><link rel="prefetch" href="/assets/js/63.3975ffd5.js"><link rel="prefetch" href="/assets/js/64.911d2812.js"><link rel="prefetch" href="/assets/js/65.ce9ab40b.js"><link rel="prefetch" href="/assets/js/66.b89de3df.js"><link rel="prefetch" href="/assets/js/67.4169b86c.js"><link rel="prefetch" href="/assets/js/68.a812ad4b.js"><link rel="prefetch" href="/assets/js/69.b0c76c03.js"><link rel="prefetch" href="/assets/js/7.2aba56aa.js"><link rel="prefetch" href="/assets/js/70.9749f302.js"><link rel="prefetch" href="/assets/js/71.0d38010b.js"><link rel="prefetch" href="/assets/js/72.a6338004.js"><link rel="prefetch" href="/assets/js/73.c1001eb8.js"><link rel="prefetch" href="/assets/js/74.0069037e.js"><link rel="prefetch" href="/assets/js/75.c4591a8d.js"><link rel="prefetch" href="/assets/js/76.e1a3f216.js"><link rel="prefetch" href="/assets/js/77.df0b0aac.js"><link rel="prefetch" href="/assets/js/78.2f535a98.js"><link rel="prefetch" href="/assets/js/79.60e4b9f5.js"><link rel="prefetch" href="/assets/js/8.c5d718a6.js"><link rel="prefetch" href="/assets/js/80.50af71ac.js"><link rel="prefetch" href="/assets/js/81.7d753c90.js"><link rel="prefetch" href="/assets/js/82.5703b0fa.js"><link rel="prefetch" href="/assets/js/83.4af8ebaa.js"><link rel="prefetch" href="/assets/js/84.ed963d52.js"><link rel="prefetch" href="/assets/js/85.7cb175ff.js"><link rel="prefetch" href="/assets/js/86.bd0d1f92.js"><link rel="prefetch" href="/assets/js/87.f00e8426.js"><link rel="prefetch" href="/assets/js/88.a34c0493.js"><link rel="prefetch" href="/assets/js/89.564cb64c.js"><link rel="prefetch" href="/assets/js/9.25143fa3.js"><link rel="prefetch" href="/assets/js/90.ce031d67.js"><link rel="prefetch" href="/assets/js/91.2a75f163.js"><link rel="prefetch" href="/assets/js/92.a2591da3.js"><link rel="prefetch" href="/assets/js/93.6af4f4b0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.84748982.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-349e681a><div data-v-349e681a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-b3e6ef50 data-v-349e681a data-v-349e681a><h3 class="title" data-v-b3e6ef50>WaterFly</h3> <p class="description" data-v-b3e6ef50>Just Coding</p> <label id="box" class="inputBox" data-v-b3e6ef50><input type="password" value="" data-v-b3e6ef50> <span data-v-b3e6ef50>Konck! Knock!</span> <button data-v-b3e6ef50>OK</button></label> <div class="footer" data-v-b3e6ef50><span data-v-b3e6ef50><i class="iconfont reco-theme" data-v-b3e6ef50></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-b3e6ef50>vuePress-theme-reco</a></span> <span data-v-b3e6ef50><i class="iconfont reco-copyright" data-v-b3e6ef50></i> <a data-v-b3e6ef50><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-349e681a><header class="navbar" data-v-349e681a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">WaterFly</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><a href="/Algorithm/" class="nav-link"><i class="undefined"></i>
+  算法
+</a></div><div class="nav-item"><a href="/Web/" class="nav-link router-link-active"><i class="undefined"></i>
+  Web
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      iOS
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/Swift/" class="nav-link"><i class="undefined"></i>
+  Swift
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/OC/" class="nav-link"><i class="undefined"></i>
+  OC
+</a></li></ul></div></div><div class="nav-item"><a href="/Other/" class="nav-link"><i class="undefined"></i>
+  Other
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/waterfly" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-349e681a></div> <aside class="sidebar" data-v-349e681a><div class="personal-info-wrapper" data-v-1bfe3fa5 data-v-349e681a><img src="/bike.png" alt="author-avatar" class="personal-img" data-v-1bfe3fa5> <!----> <div class="num" data-v-1bfe3fa5><div data-v-1bfe3fa5><h3 data-v-1bfe3fa5>83</h3> <h6 data-v-1bfe3fa5>Articles</h6></div> <div data-v-1bfe3fa5><h3 data-v-1bfe3fa5>34</h3> <h6 data-v-1bfe3fa5>Tags</h6></div></div> <ul class="social-links" data-v-1bfe3fa5></ul> <hr data-v-1bfe3fa5></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><a href="/Algorithm/" class="nav-link"><i class="undefined"></i>
+  算法
+</a></div><div class="nav-item"><a href="/Web/" class="nav-link router-link-active"><i class="undefined"></i>
+  Web
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      iOS
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/Swift/" class="nav-link"><i class="undefined"></i>
+  Swift
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/OC/" class="nav-link"><i class="undefined"></i>
+  OC
+</a></li></ul></div></div><div class="nav-item"><a href="/Other/" class="nav-link"><i class="undefined"></i>
+  Other
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/waterfly" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/Web/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/Web/FrontLearning.html" class="sidebar-link">前端学习规划</a></li><li><a href="/Web/VSCode.html" class="sidebar-link">VSCode</a></li><li><a href="/Web/AppBuild/BuildSystemWorkDiary.html" class="sidebar-link">构建系统开发纪要</a></li><li><a href="/Web/Hexo/服务器上搭建hexo博客.html" class="sidebar-link">服务器上搭建hexo博客</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Web/Vue/VueComponentDemo.html" class="sidebar-link">开发一个Vue组件</a></li><li><a href="/Web/Vue/BuildVuePress/buildVuePress.html" class="sidebar-link">从零搭建VuePress站点</a></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading open"><span>VueRouter学习笔记</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Web/Vue/router/VueRouterNoteCore.html" aria-current="page" class="active sidebar-link">Vue Router 学习笔记-核心</a></li><li><a href="/Web/Vue/router/VueRouterNoteExtend.html" class="sidebar-link">Vue Router 学习笔记-扩展</a></li></ul></section></li><li><a href="/Web/Vue/VueEcosystem/VueEcosystem.html" class="sidebar-link">Vue生态库</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>前端工程基建</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Web/Base/ConventionalCommits/ConventionalCommits.html" class="sidebar-link">约定式提交规范</a></li><li><a href="/Web/Base/YAML.html" class="sidebar-link">YAML语法规则</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>项目经验</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Web/Project/JSMpeg.html" class="sidebar-link">使用JSMpeg实现视频自动播放</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-b3e6ef50 data-v-349e681a><h3 class="title" data-v-b3e6ef50>Vue Router 学习笔记-核心</h3> <!----> <label id="box" class="inputBox" data-v-b3e6ef50><input type="password" value="" data-v-b3e6ef50> <span data-v-b3e6ef50>Konck! Knock!</span> <button data-v-b3e6ef50>OK</button></label> <div class="footer" data-v-b3e6ef50><span data-v-b3e6ef50><i class="iconfont reco-theme" data-v-b3e6ef50></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-b3e6ef50>vuePress-theme-reco</a></span> <span data-v-b3e6ef50><i class="iconfont reco-copyright" data-v-b3e6ef50></i> <a data-v-b3e6ef50><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-349e681a><div data-v-349e681a><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">Vue Router 学习笔记-核心</h1> <div data-v-0b291498><!----> <i class="iconfont reco-date" data-v-0b291498><span data-v-0b291498>1/29/2023</span></i> <!----> <i class="tags iconfont reco-tag" data-v-0b291498><span class="tag-item" data-v-0b291498>Vue</span></i></div></div> <div class="theme-reco-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#vue-router-学习笔记-核心">Vue Router 学习笔记-核心</a><ul><li><a href="#最小核心">最小核心</a><ul><li><a href="#路由配置">路由配置</a></li><li><a href="#导航函数">导航函数</a><ul><li><a href="#push">push</a></li><li><a href="#replace">replace</a></li><li><a href="#go">go</a></li><li><a href="#导航传参">导航传参</a></li></ul></li><li><a href="#导航守卫">导航守卫</a><ul><li><a href="#介绍">介绍</a></li><li><a href="#组件守卫组合式api">组件守卫组合式API</a></li><li><a href="#导航解析流程">导航解析流程</a></li></ul></li></ul></li></ul></li></ul></div>
+[TOC]<p></p> <h1 id="vue-router-学习笔记-核心"><a href="#vue-router-学习笔记-核心" class="header-anchor">#</a> Vue Router 学习笔记-核心</h1> <p>Vue Router是Vue.js的官方路由，用于构建<a href="https://zh.wikipedia.org/wiki/%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8" target="_blank" rel="noopener noreferrer">SPA（单页面应用）<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <p>理解Vue Router从核心和扩展两部分入手，核心部分是Vue Router的最基础最核心功能，扩展部分是基于核心而扩展用于不同场景和需求的写法。</p> <p>核心部分，是路由最小核心，是路由不可或缺的部分，分为三部分：</p> <ul><li>路由配置</li> <li>导航函数</li> <li>导航守卫</li></ul> <p>扩展部分，在基础的基础上进行了更多的扩展写法，适用于更复杂的场景。例如：</p> <ul><li>对路由配置进行扩展，加入了动态路由匹配、路由正则匹配等</li> <li>引入嵌套路由、命名路由、命名视图、重定向和别名、路由组件传参等</li> <li>历史记录模式分为hash模式和H5模式</li> <li>路由元信息，可将任意附加信息添加到路由上</li> <li>引入组合式API、过渡动效、滚动行为、路由懒加载、自定义RouterLink、导航故障、动态路由等</li></ul> <p>注，这里核心是指把路由拆解后的最小核心功能，扩展是基于最小核心添加适合不同场景和需求的一些额外写法（没有严格按照官方文档的基础与进阶来写）。</p> <h2 id="最小核心"><a href="#最小核心" class="header-anchor">#</a> 最小核心</h2> <h3 id="路由配置"><a href="#路由配置" class="header-anchor">#</a> 路由配置</h3> <p>使用路由前需要对路由进行配置，即定义path、componet等，一般配置文件放在 <code>/src/router/</code>目录下。</p> <p>路由配置的最小单元需包含path和component，配置示例如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Home <span class="token keyword">from</span> <span class="token string">&quot;Home.vue&quot;</span>
+
+<span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">component</span><span class="token operator">:</span> Home<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&quot;/about&quot;</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/page/about.vue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>		<span class="token comment">// 路由懒加载写法，一般直接使用这种写法</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><p>下面是一个较为完整的路由配置文件示例，包含了路由配置、创建Router等</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 1. 创建路由配置</span>
+<span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&quot;/home&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">redirect</span><span class="token operator">:</span> <span class="token string">&quot;/&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/page/Home.vue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&quot;/a/:test&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;PageA&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/page/PageA.vue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">beforeEnter</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ...</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;配置守卫 beforeEnter&quot;</span><span class="token punctuation">,</span> to<span class="token punctuation">,</span> from<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&quot;a/sub/:userId&quot;</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;pageSub&quot;</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/page/PageASub.vue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 2. 创建Router</span>
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">createRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">history</span><span class="token operator">:</span> <span class="token function">createWebHashHistory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  routes<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3. 导出Router，让Vue使用</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> router<span class="token punctuation">;</span>
+
+</code></pre></div><p>路由配置好后，就可以使用<code>&lt;router-view&gt;</code>组件进行显示，下面是一个示例：</p> <div class="language-vue extra-class"><pre class="language-vue"><code>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span> <span class="token attr-name">v-slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{ Component, route }<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span> <span class="token attr-name">:is</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Component<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>route.meta.name<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>component</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="导航函数"><a href="#导航函数" class="header-anchor">#</a> 导航函数</h3> <p>在HTML文件内，可以使用<code>&lt;router-link&gt;</code>标签进行跳转，代码示例：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Hello App!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--使用 router-link 组件进行导航 --&gt;</span>
+    <span class="token comment">&lt;!--通过传递 `to` 来指定链接 --&gt;</span>
+    <span class="token comment">&lt;!--`&lt;router-link&gt;` 将呈现一个带有正确 `href` 属性的 `&lt;a&gt;` 标签--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Go to Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-link</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/about<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Go to About<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-link</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- 路由出口 --&gt;</span>
+  <span class="token comment">&lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>但是更多的时候是使用导航函数来实现跳转（编程式导航），常用的导航函数有：</p> <ul><li>push，这个方法会向 history 栈添加一个新的记录，点击返回会返回到之前的URL</li> <li>replace，这个方法<strong>不</strong>会向history 栈添加新记录，其他基本与push相同</li> <li>go，这个方法表示横跨历史，正数表示前进，负数表示后退</li></ul> <p>注意点：</p> <ol><li><strong>导航方法都是异步的，返回的结果是一个promise对象，该promise会在所有的导航守卫走完之后触发，表示导航的结果。</strong></li> <li>**导航函数如果传入了path，则会忽略params。**因为path本身就是路径，params是用于动态路由中组成path的一部分（例如<code>path: &quot;/a/:userId&quot;</code>中的userId这个动态参数），所以path和params不能互相传。（params可通过<code>this.$route.params</code>获取）</li> <li><code>&lt;router-link&gt;</code> to的参数类型为 <code>RouteLocationRaw</code>，与push函数的入参相同</li></ol> <h4 id="push"><a href="#push" class="header-anchor">#</a> push</h4> <p>向 history 栈添加一个新的记录，点击返回会返回到之前的URL，需要注意方法是异步函数，返回对象时Promise对象，表示导航是否成功。</p> <p>这里列几个官方的例子参考：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 字符串路径</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/users/eduardo'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 带有路径的对象</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/users/eduardo'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 命名的路由，并加上参数，让路由建立 url</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'user'</span><span class="token punctuation">,</span> <span class="token literal-property property">params</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">'eduardo'</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 带查询参数，结果是 /register?plan=private</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/register'</span><span class="token punctuation">,</span> <span class="token literal-property property">query</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">plan</span><span class="token operator">:</span> <span class="token string">'private'</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 带 hash，结果是 /about#team</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/about'</span><span class="token punctuation">,</span> <span class="token literal-property property">hash</span><span class="token operator">:</span> <span class="token string">'#team'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> username <span class="token operator">=</span> <span class="token string">'eduardo'</span>
+<span class="token comment">// 我们可以手动建立 url，但我们必须自己处理编码</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/user/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>username<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span> <span class="token comment">// -&gt; /user/eduardo</span>
+<span class="token comment">// 同样</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/user/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>username<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// -&gt; /user/eduardo</span>
+<span class="token comment">// 如果可能的话，使用 `name` 和 `params` 从自动 URL 编码中获益</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'user'</span><span class="token punctuation">,</span> <span class="token literal-property property">params</span><span class="token operator">:</span> <span class="token punctuation">{</span> username <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// -&gt; /user/eduardo</span>
+<span class="token comment">// `params` 不能与 `path` 一起使用</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/user'</span><span class="token punctuation">,</span> <span class="token literal-property property">params</span><span class="token operator">:</span> <span class="token punctuation">{</span> username <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// -&gt; /user</span>
+</code></pre></div><p>push返回对象时Promise对象，如果导航报错会返回 <code>NavigationFailureType</code> 类型，无错会返回<code>undefined</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 写法一，判断是否有错误</span>
+<span class="token keyword">const</span> navigationResult <span class="token operator">=</span> <span class="token keyword">await</span> router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/my-profile'</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>navigationResult<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 导航被阻止</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 导航成功 (包括重新导航的情况)</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>isMenuOpen <span class="token operator">=</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">// 写法二，检察错误是否属于某种类型</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NavigationFailureType<span class="token punctuation">,</span> isNavigationFailure <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+
+<span class="token comment">// 试图离开未保存的编辑文本界面</span>
+<span class="token keyword">const</span> failure <span class="token operator">=</span> <span class="token keyword">await</span> router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/articles/2'</span><span class="token punctuation">)</span>
+<span class="token comment">// 判断错误是否是 NavigationFailureType.aborted 类型</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isNavigationFailure</span><span class="token punctuation">(</span>failure<span class="token punctuation">,</span> NavigationFailureType<span class="token punctuation">.</span>aborted<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 给用户显示一个小通知</span>
+  <span class="token function">showToast</span><span class="token punctuation">(</span><span class="token string">'You have unsaved changes, discard and leave anyway?'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="replace"><a href="#replace" class="header-anchor">#</a> replace</h4> <p>使用基本与push相同，只是不会在history新增栈，而是取代当前栈。</p> <p>此外，也可在push方法里新增 <code>replace: true</code>参数来使push达到replace的效果</p> <div class="language-js extra-class"><pre class="language-js"><code>router<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/home'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 相当于</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/home'</span><span class="token punctuation">,</span> <span class="token literal-property property">replace</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="go"><a href="#go" class="header-anchor">#</a> go</h4> <p>表示在历史堆栈中前进或后退多少部，相当于 <code>window.history.go(n)</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 向前移动一条记录，与 router.forward() 相同</span>
+router<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 返回一条记录，与 router.back() 相同</span>
+router<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 前进 3 条记录</span>
+router<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 如果没有那么多记录，静默失败</span>
+router<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">)</span>
+router<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="导航传参"><a href="#导航传参" class="header-anchor">#</a> 导航传参</h4> <ul><li><p>query，添加到url上的query部分</p></li> <li><p>params，<strong>是path的一部分，需要实现在路由上定义，不定义的参数不能传递，即不能随意传参</strong>。例</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token number">1.</span> 路由定义：<span class="token operator">/</span>users<span class="token operator">/</span><span class="token operator">:</span>username<span class="token operator">/</span>posts<span class="token operator">/</span><span class="token operator">:</span>postId，params为：<span class="token punctuation">{</span> <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">'eduardo'</span><span class="token punctuation">,</span> <span class="token literal-property property">postId</span><span class="token operator">:</span> <span class="token string">'123'</span> <span class="token punctuation">}</span>
+<span class="token number">2.</span> 路由定义：<span class="token operator">/</span>users<span class="token operator">/</span><span class="token operator">:</span>username，params为：<span class="token punctuation">{</span> <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">'eduardo'</span> <span class="token punctuation">}</span>
+<span class="token number">3.</span> 路由定义：<span class="token operator">/</span>users<span class="token operator">/</span><span class="token operator">:</span>username，如果 设置 params为：<span class="token punctuation">{</span> <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">'eduardo'</span><span class="token punctuation">,</span> <span class="token literal-property property">postId</span><span class="token operator">:</span> <span class="token string">'123'</span> <span class="token punctuation">}</span>，页面只能收到username参数，其他path未定义的参数都会忽略
+</code></pre></div></li> <li><p>如果需要传递复杂对象，可以通过Storage存储和读取</p></li></ul> <h3 id="导航守卫"><a href="#导航守卫" class="header-anchor">#</a> 导航守卫</h3> <p>导航守卫用于通过跳转或取消的方式守卫导航，用于鉴权、修改标题等等需要在路由发生变化时做的操作。</p> <h4 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h4> <p>导航守卫从作用类型上分为两类：</p> <ul><li>守卫函数，这类函数里可以修改导航行为，比如跳转到其他页面或取消等操作</li> <li>钩子函数，这类函数只是导航行为到某个阶段的通知，不可以修改导航行为（只有一个钩子函数：全局后置钩子 afterEach）</li></ul> <p>注意点：</p> <ol><li><p>导航守卫函数都接受两个参数：<code>to</code>、<code>from</code>，表示要进入的目标和要离开的目标，类型为<a href="https://router.vuejs.org/zh/api/#routelocationnormalized" target="_blank" rel="noopener noreferrer">RouteLocationNormalized<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p>守卫函数还接受第三个函数<code>next函数</code>，用于实现修改导航行为，但现在基本已经可以不用，直接在守卫函数内使用<code>return语句</code>返回，即可实现修改、取消等行文，守卫函数返回的值返回类型为：</p> <ul><li>false，取消当前的导航</li> <li>一个<a href="https://router.vuejs.org/zh/api/#routelocationraw" target="_blank" rel="noopener noreferrer">路由地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，即同push函数的传参一样，会中断当前的导航开始新的导航</li> <li>无返回、undefined、true，表示当前导航有效，继续导航</li></ul></li> <li><p>钩子函数（只有一个钩子函数 afterEach）接受第三个参数<a href="https://router.vuejs.org/zh/guide/advanced/navigation-failures.html" target="_blank" rel="noopener noreferrer">failure<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，表示导航结果</p></li></ol> <p>从级别角度分为三类：</p> <ul><li>全局守卫，包括：
+<ul><li>全局前置守卫（beforeEach），可以对导航 做取消、重定向、判断是否登录等前置拦截操作</li> <li>全局解析守卫（beforeResolve），最后一次可以取消导航的机会，一般用于权限申请等操作，该步骤过后，导航将被确认，是用于获取数据或执行任何其他操作（如果用户无法进入页面时你希望避免执行的操作）的理想位置。</li> <li>全局后置钩子（afterEach），对于分析、更改页面标题、声明页面等辅助功能以及许多其他事情都很有用</li></ul></li> <li>路由守卫，包括：
+<ul><li>路由守卫（beforeEnter），路由守卫只会在进入路由时触发，不会在<code>params</code>、<code>query</code> 或 <code>hash</code> 改变时触发，例如从 <code>/users/2</code> 进入到 <code>/users/3</code> 或者从 <code>/users/2#info</code> 进入到 <code>/users/2#projects</code>时不会触发路由守卫，即只有进入一个不同的路由导航时，才会触发路由守卫。路由守卫与其他守卫不同的地方在于，可以给路由守卫传入一组函数，实现特定行为。</li></ul></li> <li>组件守卫，包括：
+<ul><li>beforeRouteEnter，在渲染该组件的对应路由被验证前调用，不能获取组件实例 <code>this</code> ，因为当守卫执行时，组件实例还没被创建。需要注意的是，可给该守卫的next函数传入一个回调，当导航确认后会执行该回调，并传入该组件实例</li> <li>beforeRouteUpdate，组件被复用时触发</li> <li>beforeRouteLeave，导航在离开该组件时触发</li></ul></li></ul> <p>一些代码示例：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 全局前置守卫 beforeEach</span>
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">createRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token comment">// 返回 false 以取消导航</span>
+  <span class="token keyword">return</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 全局解析守卫 beforeResolve</span>
+router<span class="token punctuation">.</span><span class="token function">beforeResolve</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token parameter">to</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>to<span class="token punctuation">.</span>meta<span class="token punctuation">.</span>requiresCamera<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">await</span> <span class="token function">askForCameraPermission</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>error <span class="token keyword">instanceof</span> <span class="token class-name">NotAllowedError</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ... 处理错误，然后取消导航</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 意料之外的错误，取消导航并把错误传给全局处理器</span>
+        <span class="token keyword">throw</span> error
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 全局钩子函数 afterEach</span>
+router<span class="token punctuation">.</span><span class="token function">afterEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">sendToAnalytics</span><span class="token punctuation">(</span>to<span class="token punctuation">.</span>fullPath<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">// 路由守卫 beforeEnter</span>
+<span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/users/:id'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">component</span><span class="token operator">:</span> UserDetails<span class="token punctuation">,</span>
+    <span class="token function-variable function">beforeEnter</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// reject the navigation</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token comment">// 路由守卫可以接受一组函数，&quot;这在为不同的路由重用守卫时很有用&quot;</span>
+<span class="token keyword">function</span> <span class="token function">removeQueryParams</span><span class="token punctuation">(</span><span class="token parameter">to</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>to<span class="token punctuation">.</span>query<span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> to<span class="token punctuation">.</span>path<span class="token punctuation">,</span> <span class="token literal-property property">query</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token literal-property property">hash</span><span class="token operator">:</span> to<span class="token punctuation">.</span>hash <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">removeHash</span><span class="token punctuation">(</span><span class="token parameter">to</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>to<span class="token punctuation">.</span>hash<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> to<span class="token punctuation">.</span>path<span class="token punctuation">,</span> <span class="token literal-property property">query</span><span class="token operator">:</span> to<span class="token punctuation">.</span>query<span class="token punctuation">,</span> <span class="token literal-property property">hash</span><span class="token operator">:</span> <span class="token string">''</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/users/:id'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">component</span><span class="token operator">:</span> UserDetails<span class="token punctuation">,</span>
+    <span class="token literal-property property">beforeEnter</span><span class="token operator">:</span> <span class="token punctuation">[</span>removeQueryParams<span class="token punctuation">,</span> removeHash<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/about'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">component</span><span class="token operator">:</span> UserDetails<span class="token punctuation">,</span>
+    <span class="token literal-property property">beforeEnter</span><span class="token operator">:</span> <span class="token punctuation">[</span>removeQueryParams<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+
+<span class="token comment">// 组件守卫</span>
+<span class="token keyword">const</span> UserDetails <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">...</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+  <span class="token function">beforeRouteEnter</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在渲染该组件的对应路由被验证前调用</span>
+    <span class="token comment">// 不能获取组件实例 `this` ！</span>
+    <span class="token comment">// 因为当守卫执行时，组件实例还没被创建！</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">beforeRouteUpdate</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在当前路由改变，但是该组件被复用时调用</span>
+    <span class="token comment">// 举例来说，对于一个带有动态参数的路径 `/users/:id`，在 `/users/1` 和 `/users/2` 之间跳转的时候，</span>
+    <span class="token comment">// 由于会渲染同样的 `UserDetails` 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。</span>
+    <span class="token comment">// 因为在这种情况发生的时候，组件已经挂载好了，导航守卫可以访问组件实例 `this`</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">beforeRouteLeave</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在导航离开渲染该组件的对应路由时调用</span>
+    <span class="token comment">// 与 `beforeRouteUpdate` 一样，它可以访问组件实例 `this`</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 可给 beforeRouteEnter 的next函数传入一个回调函数，当导航确认后会执行该回调，并传入该组件实例</span>
+<span class="token function">beforeRouteEnter</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">next</span><span class="token punctuation">(</span><span class="token parameter">vm</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 通过 `vm` 访问组件实例</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><h4 id="组件守卫组合式api"><a href="#组件守卫组合式api" class="header-anchor">#</a> 组件守卫组合式API</h4> <p>组件守卫在组合式API的写法需要特殊注意下（全局守卫和路由守卫与组合式API相同）。</p> <ol><li><p>Vue Router提供<code>onBeforeRouteLeave</code>, <code>onBeforeRouteUpdate</code>两个组合式API函数</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> onBeforeRouteLeave<span class="token punctuation">,</span> onBeforeRouteUpdate <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 与 beforeRouteLeave 相同，无法访问 `this`</span>
+    <span class="token function">onBeforeRouteLeave</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> answer <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">confirm</span><span class="token punctuation">(</span>
+        <span class="token string">'Do you really want to leave? you have unsaved changes!'</span>
+      <span class="token punctuation">)</span>
+      <span class="token comment">// 取消导航并停留在同一页面上</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>answer<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">const</span> userData <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 与 beforeRouteUpdate 相同，无法访问 `this`</span>
+    <span class="token function">onBeforeRouteUpdate</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">//仅当 id 更改时才获取用户，例如仅 query 或 hash 值已更改</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>to<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id <span class="token operator">!==</span> from<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        userData<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchUser</span><span class="token punctuation">(</span>to<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p><code>beforeRouteEnter</code>的写法有点特殊，因为在执行<code>beforeRouteEnter</code>时，组件还没被创立，即该函数的执行在<code>setup</code>函数之前，所以不能写在<code>setup</code>函数之内</p> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token comment">// 写法一，使用组合式API</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">components</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// This needs to be defined outside the setup block</span>
+    <span class="token function">beforeRouteEnter</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">next</span><span class="token punctuation">(</span><span class="token parameter">vm</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// vm表示组件的实例，可以在这里对vm内属性进行赋值等操作</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>vm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">onBeforeRouteUpdate</span><span class="token punctuation">(</span><span class="token parameter">to</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 写法二，setup标签写法，在增加一个script，不过需要注意lang要相同</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">beforeRouteEnter</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">vm</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// vm表示组件的实例，可以在这里对vm内属性进行赋值等操作</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>vm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script setup<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useRouter<span class="token punctuation">,</span> useRoute <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vue-router&quot;</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+
+<span class="token comment">//写法三，setup标签TS的写法</span>
+<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">&quot;ts&quot;</span><span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent<span class="token punctuation">,</span> ComponentPublicInstance <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">IInstance</span> <span class="token keyword">extends</span> <span class="token class-name">ComponentPublicInstance</span> <span class="token punctuation">{</span>
+  <span class="token function">setPathFrom</span><span class="token punctuation">(</span>from<span class="token operator">:</span> string<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">beforeRouteEnter</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">vm</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> instance <span class="token operator">=</span> vm <span class="token keyword">as</span> IInstance
+      instance<span class="token punctuation">.</span><span class="token function">setPathFrom</span><span class="token punctuation">(</span>from<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">&quot;ts&quot;</span> setup<span class="token operator">&gt;</span>
+<span class="token keyword">let</span> <span class="token literal-property property">pathFrom</span><span class="token operator">:</span> string
+<span class="token keyword">const</span> <span class="token function-variable function">setPathFrom</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">path</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  pathFrom <span class="token operator">=</span> path
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'vue-route::from::'</span><span class="token punctuation">,</span> pathFrom<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">defineExpose</span><span class="token punctuation">(</span><span class="token punctuation">{</span> setPathFrom <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+
+<span class="token comment">// 注意点，在 beforeRouteEnter 内也可以利用 路由的props特性，给组件的props赋值</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useFetch <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vueuse/core'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">beforeRouteEnter</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">to</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useFetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/your/url/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>to<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token comment">// 赋值给 meta，最终利用路由的props配置给组件的props赋值</span>
+    to<span class="token punctuation">.</span>meta<span class="token punctuation">.</span>data <span class="token operator">=</span> data
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script setup<span class="token operator">&gt;</span>
+<span class="token function">defineProps</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token keyword">null</span><span class="token punctuation">,</span> Object<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// ...</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+<span class="token comment">// 组件内写法</span>
+<span class="token punctuation">{</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/your/url/:id'</span><span class="token punctuation">,</span>
+  <span class="token comment">// 利用 meta，赋值给props</span>
+  <span class="token function-variable function">props</span><span class="token operator">:</span> <span class="token parameter">to</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">data</span><span class="token operator">:</span> to<span class="token punctuation">.</span>meta<span class="token punctuation">.</span>data <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+  
+  
+</code></pre></div></li></ol> <h4 id="导航解析流程"><a href="#导航解析流程" class="header-anchor">#</a> 导航解析流程</h4> <blockquote><p>完整的导航解析流程：</p> <ol><li>导航被触发。</li> <li>在失活的组件里调用 <code>beforeRouteLeave</code> 守卫。</li> <li>调用全局的 <code>beforeEach</code> 守卫。</li> <li>在重用的组件里调用 <code>beforeRouteUpdate</code> 守卫(2.2+)。</li> <li>在路由配置里调用 <code>beforeEnter</code>。</li> <li>解析异步路由组件。</li> <li>在被激活的组件里调用 <code>beforeRouteEnter</code>。</li> <li>调用全局的 <code>beforeResolve</code> 守卫(2.5+)。</li> <li>导航被确认。</li> <li>调用全局的 <code>afterEach</code> 钩子。</li> <li>触发 DOM 更新。</li> <li>调用 <code>beforeRouteEnter</code> 守卫中传给 <code>next</code> 的回调函数，创建好的组件实例会作为回调函数的参数传入。</li></ol></blockquote> <p>以上是Vue Router文档路由导航解析的流程。</p> <p>简单来说，<strong>执行顺序上 全局守卫 &gt;（早于） 路由守卫 &gt;（早于） 组件守卫</strong>。</p> <p>需要注意的是，导航函数（push、replace、go等）的回调会在最后执行，即在第12步以后执行。</p> <div class="language-js extra-class"><pre class="language-js"><code>        router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;PageC&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 导航函数的回调，在最后执行，如果导航报错会返回 `NavigationFailureType` 类型，无错会返回`undefined`，错误类型可以用 isNavigationFailure 函数判断</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;res&quot;</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>VueRouter完整导航解析流程图示：</p> <p><img src="/assets/img/VueRouterFlow.16c0b285.jpg" alt=""></p> <p>注：</p> <ol><li><p>当组件重用时，不会触发路由配置守卫，且组件守卫<code>beforeRouteUpdate</code>会在全局前置守卫之后就触发，守卫触发流程如下：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token number">1</span>. 全局前置守卫 router.beforeEach
+<span class="token number">2</span>. 组件守卫 beforeRouteUpdate
+<span class="token number">3</span>. 全局解析守卫 router.beforeResolve
+<span class="token number">4</span>. 全局后置钩子 router.afterEach
+</code></pre></div></li></ol></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">3/1/2023, 5:27:01 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/Web/Vue/BuildVuePress/buildVuePress.html" class="prev">
+          从零搭建VuePress站点
+        </a></span> <span class="next"><a href="/Web/Vue/router/VueRouterNoteExtend.html">
+          Vue Router 学习笔记-扩展
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-3b069fde data-v-349e681a><li class="level-2" data-v-3b069fde><a href="/Web/Vue/router/VueRouterNoteCore.html#最小核心" class="sidebar-link reco-side-最小核心" data-v-3b069fde>最小核心</a></li><li class="level-3" data-v-3b069fde><a href="/Web/Vue/router/VueRouterNoteCore.html#路由配置" class="sidebar-link reco-side-路由配置" data-v-3b069fde>路由配置</a></li><li class="level-3" data-v-3b069fde><a href="/Web/Vue/router/VueRouterNoteCore.html#导航函数" class="sidebar-link reco-side-导航函数" data-v-3b069fde>导航函数</a></li><li class="level-3" data-v-3b069fde><a href="/Web/Vue/router/VueRouterNoteCore.html#导航守卫" class="sidebar-link reco-side-导航守卫" data-v-3b069fde>导航守卫</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-2a01419c data-v-2a01419c><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-2a01419c><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-2a01419c></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-2a01419c></path></svg></div></div></div>
+    <script src="/assets/js/app.3efcfa1f.js" defer></script><script src="/assets/js/3.d41f5393.js" defer></script><script src="/assets/js/1.0d0e82e9.js" defer></script><script src="/assets/js/34.71ab4ffb.js" defer></script>
+  </body>
+</html>

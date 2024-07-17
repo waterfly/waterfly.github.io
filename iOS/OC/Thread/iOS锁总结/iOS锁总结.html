@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>iOS锁总结 | WaterFly</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="Just Coding">
+    
+    <link rel="preload" href="/assets/css/0.styles.84748982.css" as="style"><link rel="preload" href="/assets/js/app.3efcfa1f.js" as="script"><link rel="preload" href="/assets/js/3.d41f5393.js" as="script"><link rel="preload" href="/assets/js/1.0d0e82e9.js" as="script"><link rel="preload" href="/assets/js/20.92e231d8.js" as="script"><link rel="prefetch" href="/assets/js/10.6a591f7b.js"><link rel="prefetch" href="/assets/js/11.2da2c136.js"><link rel="prefetch" href="/assets/js/12.597e1e9e.js"><link rel="prefetch" href="/assets/js/13.bfe6e49a.js"><link rel="prefetch" href="/assets/js/14.d5101ebe.js"><link rel="prefetch" href="/assets/js/15.d075eb78.js"><link rel="prefetch" href="/assets/js/16.1de846ec.js"><link rel="prefetch" href="/assets/js/17.73e1206f.js"><link rel="prefetch" href="/assets/js/18.3563029d.js"><link rel="prefetch" href="/assets/js/19.018202b6.js"><link rel="prefetch" href="/assets/js/21.a26b4bf6.js"><link rel="prefetch" href="/assets/js/22.a240a942.js"><link rel="prefetch" href="/assets/js/23.5d73353d.js"><link rel="prefetch" href="/assets/js/24.1a101222.js"><link rel="prefetch" href="/assets/js/25.f7c05ac5.js"><link rel="prefetch" href="/assets/js/26.cf0f99d3.js"><link rel="prefetch" href="/assets/js/27.4412c990.js"><link rel="prefetch" href="/assets/js/28.a9e9a7e1.js"><link rel="prefetch" href="/assets/js/29.9b39ea41.js"><link rel="prefetch" href="/assets/js/30.19dafc01.js"><link rel="prefetch" href="/assets/js/31.9d2c45f0.js"><link rel="prefetch" href="/assets/js/32.f7aa758f.js"><link rel="prefetch" href="/assets/js/33.54518586.js"><link rel="prefetch" href="/assets/js/34.71ab4ffb.js"><link rel="prefetch" href="/assets/js/35.5442dc08.js"><link rel="prefetch" href="/assets/js/36.3d80fb49.js"><link rel="prefetch" href="/assets/js/37.d767afa3.js"><link rel="prefetch" href="/assets/js/38.15d6331f.js"><link rel="prefetch" href="/assets/js/39.a6c25426.js"><link rel="prefetch" href="/assets/js/4.d08f1479.js"><link rel="prefetch" href="/assets/js/40.87d678b9.js"><link rel="prefetch" href="/assets/js/41.edd890b5.js"><link rel="prefetch" href="/assets/js/42.d6677079.js"><link rel="prefetch" href="/assets/js/43.ff4d75ff.js"><link rel="prefetch" href="/assets/js/44.32c7a951.js"><link rel="prefetch" href="/assets/js/45.2c851721.js"><link rel="prefetch" href="/assets/js/46.9bbe5a11.js"><link rel="prefetch" href="/assets/js/47.0e2c36cc.js"><link rel="prefetch" href="/assets/js/48.09bc8442.js"><link rel="prefetch" href="/assets/js/49.52342b74.js"><link rel="prefetch" href="/assets/js/5.9634f48e.js"><link rel="prefetch" href="/assets/js/50.c9e3c4c5.js"><link rel="prefetch" href="/assets/js/51.28a51db9.js"><link rel="prefetch" href="/assets/js/52.58832236.js"><link rel="prefetch" href="/assets/js/53.86af7b76.js"><link rel="prefetch" href="/assets/js/54.973c15bf.js"><link rel="prefetch" href="/assets/js/55.d4a03e12.js"><link rel="prefetch" href="/assets/js/56.ac7e97e0.js"><link rel="prefetch" href="/assets/js/57.7fa14d11.js"><link rel="prefetch" href="/assets/js/58.b0f390b8.js"><link rel="prefetch" href="/assets/js/59.62b96874.js"><link rel="prefetch" href="/assets/js/6.4c543392.js"><link rel="prefetch" href="/assets/js/60.0c40514a.js"><link rel="prefetch" href="/assets/js/61.65259e68.js"><link rel="prefetch" href="/assets/js/62.9fb64114.js"><link rel="prefetch" href="/assets/js/63.3975ffd5.js"><link rel="prefetch" href="/assets/js/64.911d2812.js"><link rel="prefetch" href="/assets/js/65.ce9ab40b.js"><link rel="prefetch" href="/assets/js/66.b89de3df.js"><link rel="prefetch" href="/assets/js/67.4169b86c.js"><link rel="prefetch" href="/assets/js/68.a812ad4b.js"><link rel="prefetch" href="/assets/js/69.b0c76c03.js"><link rel="prefetch" href="/assets/js/7.2aba56aa.js"><link rel="prefetch" href="/assets/js/70.9749f302.js"><link rel="prefetch" href="/assets/js/71.0d38010b.js"><link rel="prefetch" href="/assets/js/72.a6338004.js"><link rel="prefetch" href="/assets/js/73.c1001eb8.js"><link rel="prefetch" href="/assets/js/74.0069037e.js"><link rel="prefetch" href="/assets/js/75.c4591a8d.js"><link rel="prefetch" href="/assets/js/76.e1a3f216.js"><link rel="prefetch" href="/assets/js/77.df0b0aac.js"><link rel="prefetch" href="/assets/js/78.2f535a98.js"><link rel="prefetch" href="/assets/js/79.60e4b9f5.js"><link rel="prefetch" href="/assets/js/8.c5d718a6.js"><link rel="prefetch" href="/assets/js/80.50af71ac.js"><link rel="prefetch" href="/assets/js/81.7d753c90.js"><link rel="prefetch" href="/assets/js/82.5703b0fa.js"><link rel="prefetch" href="/assets/js/83.4af8ebaa.js"><link rel="prefetch" href="/assets/js/84.ed963d52.js"><link rel="prefetch" href="/assets/js/85.7cb175ff.js"><link rel="prefetch" href="/assets/js/86.bd0d1f92.js"><link rel="prefetch" href="/assets/js/87.f00e8426.js"><link rel="prefetch" href="/assets/js/88.a34c0493.js"><link rel="prefetch" href="/assets/js/89.564cb64c.js"><link rel="prefetch" href="/assets/js/9.25143fa3.js"><link rel="prefetch" href="/assets/js/90.ce031d67.js"><link rel="prefetch" href="/assets/js/91.2a75f163.js"><link rel="prefetch" href="/assets/js/92.a2591da3.js"><link rel="prefetch" href="/assets/js/93.6af4f4b0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.84748982.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-349e681a><div data-v-349e681a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-b3e6ef50 data-v-349e681a data-v-349e681a><h3 class="title" data-v-b3e6ef50>WaterFly</h3> <p class="description" data-v-b3e6ef50>Just Coding</p> <label id="box" class="inputBox" data-v-b3e6ef50><input type="password" value="" data-v-b3e6ef50> <span data-v-b3e6ef50>Konck! Knock!</span> <button data-v-b3e6ef50>OK</button></label> <div class="footer" data-v-b3e6ef50><span data-v-b3e6ef50><i class="iconfont reco-theme" data-v-b3e6ef50></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-b3e6ef50>vuePress-theme-reco</a></span> <span data-v-b3e6ef50><i class="iconfont reco-copyright" data-v-b3e6ef50></i> <a data-v-b3e6ef50><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-349e681a><header class="navbar" data-v-349e681a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">WaterFly</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><a href="/Algorithm/" class="nav-link"><i class="undefined"></i>
+  算法
+</a></div><div class="nav-item"><a href="/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      iOS
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/Swift/" class="nav-link"><i class="undefined"></i>
+  Swift
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/OC/" class="nav-link router-link-active"><i class="undefined"></i>
+  OC
+</a></li></ul></div></div><div class="nav-item"><a href="/Other/" class="nav-link"><i class="undefined"></i>
+  Other
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/waterfly" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-349e681a></div> <aside class="sidebar" data-v-349e681a><div class="personal-info-wrapper" data-v-1bfe3fa5 data-v-349e681a><img src="/bike.png" alt="author-avatar" class="personal-img" data-v-1bfe3fa5> <!----> <div class="num" data-v-1bfe3fa5><div data-v-1bfe3fa5><h3 data-v-1bfe3fa5>83</h3> <h6 data-v-1bfe3fa5>Articles</h6></div> <div data-v-1bfe3fa5><h3 data-v-1bfe3fa5>34</h3> <h6 data-v-1bfe3fa5>Tags</h6></div></div> <ul class="social-links" data-v-1bfe3fa5></ul> <hr data-v-1bfe3fa5></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><a href="/Algorithm/" class="nav-link"><i class="undefined"></i>
+  算法
+</a></div><div class="nav-item"><a href="/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      iOS
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/Swift/" class="nav-link"><i class="undefined"></i>
+  Swift
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/OC/" class="nav-link router-link-active"><i class="undefined"></i>
+  OC
+</a></li></ul></div></div><div class="nav-item"><a href="/Other/" class="nav-link"><i class="undefined"></i>
+  Other
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="https://github.com/waterfly" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/iOS/OC/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/iOS/OC/JavaSrciptCore/JavaSrciptCore.html" class="sidebar-link">JavaSrciptCore学习</a></li><li><a href="/iOS/OC/WWDC19/WWDC19.html" class="sidebar-link">WWDC19 概要</a></li><li><a href="/iOS/OC/WK/WK_summary.html" class="sidebar-link">WK实践总结</a></li><li><a href="/iOS/OC/Thread/多用派发队列少用同步锁.html" class="sidebar-link">多用派发队列 少用同步锁</a></li><li><a href="/iOS/OC/Runtime/关联对象实现week.html" class="sidebar-link">关联对象实现week</a></li><li><a href="/iOS/OC/Component/京东组件化方案解析/京东组件化方案解析.html" class="sidebar-link">京东组件化方案解析</a></li><li><a href="/iOS/OC/Component/iOS组件化开源库阅读/iOS组件化开源库阅读.html" class="sidebar-link">iOS组件化开源库阅读</a></li><li><a href="/iOS/OC/Thread/App延长后台时间和backgroundFetch.html" class="sidebar-link">App 延长后台时间 和 background fetch</a></li><li><a href="/iOS/OC/Thread/iOS_IPC_线程通信.html" class="sidebar-link">iOS IPC 线程通信</a></li><li><a href="/iOS/OC/Thread/iOS锁总结/iOS锁总结.html" class="active sidebar-link">iOS锁总结</a></li><li><a href="/iOS/OC/Kit/API_Reference系列之Mapkit解析.html" class="sidebar-link">API Reference 系列 之Mapkit解析</a></li><li><a href="/iOS/OC/Other/导航栏TitleView不显示的问题.html" class="sidebar-link">导航栏TitleView在iOS11上不显示</a></li><li><a href="/iOS/OC/Other/Xcode_GPX文件Mock真机系统定位.html" class="sidebar-link">Xcode GPX文件Mock真机系统定位</a></li><li><a href="/iOS/OC/Other/《禅与Objective-C编程艺术》阅读笔记.html" class="sidebar-link">《禅与 Objective-C 编程艺术 》阅读笔记</a></li><li><a href="/iOS/OC/Other/UniversalLink.html" class="sidebar-link">Universal Link接入方案</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-b3e6ef50 data-v-349e681a><h3 class="title" data-v-b3e6ef50>iOS锁总结</h3> <!----> <label id="box" class="inputBox" data-v-b3e6ef50><input type="password" value="" data-v-b3e6ef50> <span data-v-b3e6ef50>Konck! Knock!</span> <button data-v-b3e6ef50>OK</button></label> <div class="footer" data-v-b3e6ef50><span data-v-b3e6ef50><i class="iconfont reco-theme" data-v-b3e6ef50></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-b3e6ef50>vuePress-theme-reco</a></span> <span data-v-b3e6ef50><i class="iconfont reco-copyright" data-v-b3e6ef50></i> <a data-v-b3e6ef50><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-349e681a><div data-v-349e681a><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">iOS锁总结</h1> <div data-v-0b291498><!----> <i class="iconfont reco-date" data-v-0b291498><span data-v-0b291498>3/2/2018</span></i> <!----> <i class="tags iconfont reco-tag" data-v-0b291498><span class="tag-item" data-v-0b291498>多线程</span></i></div></div> <div class="theme-reco-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#ios锁总结">iOS锁总结</a><ul><li><a href="#自旋锁">自旋锁</a></li><li><a href="#dispatch-semaphore">dispatch_semaphore</a><ul><li><a href="#信号量与互斥锁的区别">信号量与互斥锁的区别</a></li></ul></li><li><a href="#条件锁">条件锁</a><ul><li><a href="#生产者消费者模式">生产者消费者模式</a></li><li><a href="#nscondition">NSCondition</a></li><li><a href="#nsconditionlock">NSConditionLock</a></li></ul></li><li><a href="#pthread-mutex">pthread_mutex</a></li><li><a href="#synchronize">@synchronize</a></li><li><a href="#读写锁">读写锁</a></li><li><a href="#参考资料">参考资料</a></li></ul></li></ul></div><p></p> <p>[TOC]</p> <h1 id="ios锁总结"><a href="#ios锁总结" class="header-anchor">#</a> iOS锁总结</h1> <p>iOS开发中关于锁整理了下，有以下几种：</p> <p><img src="/assets/img/diagram.6c9789a4.jpg" alt=""></p> <p>比价常用的是：</p> <ul><li>dispatch_semaphore</li> <li>NSLock</li> <li>NSCondition, NSConditionLock</li> <li>读写锁</li> <li>NSRecursiveLock</li> <li>@synchronize</li></ul> <h2 id="自旋锁"><a href="#自旋锁" class="header-anchor">#</a> <strong>自旋锁</strong></h2> <p>有一个经典的例子来比较清晰的解释自旋锁：</p> <blockquote><p>A，B两个人合租一套房子，共用一个厕所，那么这个厕所就是共享资源，且在任一时刻最多只能有一个人在使用。当厕所闲置时，谁来了都可以使用，当A使用时，就会关上厕所门，而B也要使用，但是急啊，就得在门外焦急地等待，急得团团转，是为“自旋”，这也是要求锁的持有时间尽量短的原因！</p></blockquote> <p>就是线程A、线程B，当线程A进入临界区后，线程B不休眠而进入自旋，不断检测锁的状态，直到线程A释放锁，线程B立即获得锁而进入临界区。如果用互斥锁，会导致线程B进入休眠，引入上下文切换，会消耗CPU资源和时间，但是如果临界区的执行时间很短，则让线程B忙等的效率会更高。因此在临界区执行时间很短的情况下，用自旋锁效率会很高。不过有一点，自旋锁在单核CPU上没有意义，最新的iPhoneX 用的A11 Bionic处理器为六核。</p> <p>自旋锁在iOS中使用<strong>OSSpinLock</strong>实现，但是在 <a href="https://bestswifter.com/ios-lock/" target="_blank" rel="noopener noreferrer">深入理解 iOS 开发中的锁<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 一文中说现在的iOS版本中，自旋锁会导致优先级翻转问题。</p> <blockquote><p>优先级翻转，是一种不希望发生的任务调度状态。在该种状态下，一个高优先级任务间接被一个低优先级任务所抢先(preemtped)，使得两个任务的相对优先级被倒置。</p> <p>这往往出现在一个高优先级任务等待访问一个被低优先级任务正在使用的临界资源，从而阻塞了高优先级任务；同时，该低优先级任务被一个次高优先级的任务所抢先，从而无法及时地释放该临界资源。这种情况下，该次高优先级任务获得执行权。</p></blockquote> <blockquote><p>新版 iOS 中，系统维护了 5 个不同的线程优先级/QoS: background，utility，default，user-initiated，user-interactive。高优先级线程始终会在低优先级线程前执行，一个线程不会受到比它更低优先级线程的干扰。这种线程调度算法会产生潜在的优先级反转问题，从而破坏了 spin lock。</p></blockquote> <p>使用 <code>OSSpinLock</code> 的示例：</p> <div class="language-objective-c extra-class"><pre class="language-text"><code>#import &lt;libkern/OSAtomic.h&gt;   
+
+OSSpinLock spinLock = OS_SPINLOCK_INIT;
+
+OSSpinLockLock(&amp;spinLock);
+OSSpinLockUnlock(&amp;spinLock);
+</code></pre></div><p>由于<code>OSSpinLock</code>不再安全（不过其实出现问题的概率相对比较低），苹果推出了 <code>os_unfair_lock</code>，不过该API需要 <strong>iOS10</strong>及其以上，另外文档说该API不会自旋等待（所以严格意义上不是自旋锁？？）。</p> <blockquote><p>Replacement for the deprecated OSSpinLock. <strong>Does not spin on contention but waits in the kernel to be woken up by an unlock.</strong></p></blockquote> <p>使用示例：</p> <div class="language-objective-c extra-class"><pre class="language-text"><code>#import &lt;os/lock.h&gt;
+ 
+os_unfair_lock unfairLock = OS_UNFAIR_LOCK_INIT;     
+os_unfair_lock_lock(&amp;unfairLock);     
+os_unfair_lock_unlock(&amp;unfairLock);
+</code></pre></div><h2 id="dispatch-semaphore"><a href="#dispatch-semaphore" class="header-anchor">#</a> <strong>dispatch_semaphore</strong></h2> <blockquote><p>信号量(Semaphore)，有时被称为信号灯，是在多线程环境下使用的一种设施，是可以用来保证两个或多个关键代码段不被并发调用。在进入一个关键代码段之前，线程必须获取一个信号量；一旦该关键代码段完成了，那么该线程必须释放信号量。其它想进入该关键代码段的线程必须等待直到第一个线程释放信号量。</p></blockquote> <div class="language-objective-c extra-class"><pre class="language-text"><code>dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+
+dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+dispatch_semaphore_signal(semaphore);
+</code></pre></div><h3 id="信号量与互斥锁的区别"><a href="#信号量与互斥锁的区别" class="header-anchor">#</a> <strong>信号量与互斥锁的区别</strong></h3> <p>​	信号量为1时，使用起来感觉跟互斥锁差不多，但其实两者的设计理念是不同的。<strong>互斥锁管理的是资源的使用权，而信号量管理的是资源的数量</strong>。比如厕所，当有人使用时，其他人就进不去了，而厨房同时允许多人使用。</p> <p>​	另外，信号量也是服务于多个线程间的执行逻辑顺序，比如，a源自一个线程，b源自另一个线程，计算c = a + b也是一个线程。（即一共三个线程），显然，第三个线程必须等第一、二个线程执行完毕它才能执行，这个时候就可以用信号量来解决（当然也可以用dispatch_group）</p> <div class="language-objective-c extra-class"><pre class="language-text"><code>int a, b, c;
+void geta()
+{
+    a = calculatea();
+    semaphore_increase();		//信号量 +1
+}
+
+void getb()
+{
+    b = calculateb();
+    semaphore_increase();		//信号量 +1
+}
+
+
+void getc()
+{
+  	//由于初始信号量为0，那么这里必须等到前两个函数执行 increase操作后，才能继续执行
+    semaphore_decrease();		
+    semaphore_decrease();
+    c = a + b;
+}
+
+t1 = thread_create(geta);
+t2 = thread_create(getb);
+t3 = thread_create(getc);
+
+</code></pre></div><p>​	总结下，信号量一方面管理资源的数量，另一方面也可用于多个线程的执行逻辑顺序；而锁管理的是资源的使用权。信号量与互斥锁的设计理念是不同的，只不过当信号量为1时，可以当互斥锁用，不过这个时候直接用互斥锁更好。<code>dispatch_group</code>底层也是使用信号量实现的。</p> <h2 id="条件锁"><a href="#条件锁" class="header-anchor">#</a> 条件锁</h2> <h3 id="生产者消费者模式"><a href="#生产者消费者模式" class="header-anchor">#</a> 生产者消费者模式</h3> <blockquote><p>某个模块负责产生数据，这些数据由另一个模块来负责处理（此处的模块是广义的，可以是类、函数、线程、进程等）。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。单单抽象出生产者和消费者，还够不上是生产者／消费者模式。该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。生产者把数据放入缓冲区，而消费者从缓冲区取出数据。</p> <p>大概的结构如下图。</p></blockquote> <p><img src="data:image/jpeg;base64,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" alt=""></p> <h3 id="nscondition"><a href="#nscondition" class="header-anchor">#</a> <strong>NSCondition</strong></h3> <blockquote><p><code>NSCondition</code> 的底层是通过条件变量(condition variable) <code>pthread_cond_t</code> 来实现的。条件变量有点像信号量，提供了线程阻塞与信号机制，因此可以用来阻塞某个线程，并等待某个数据就绪，随后唤醒线程，比如常见的生产者-消费者模式。</p></blockquote> <p>Demo示例，模仿生产者-消费者模式</p> <div class="language-objective-c extra-class"><pre class="language-text"><code>NSCondition *condition = [NSCondition new];
+
+- (void)consume{
+     
+  	NSLog(@&quot;consume&quot;);
+    [condition lock];
+    
+  //这里一定要对条件进行判断，以防错误信号唤起
+    while (dataArray.count == 0) {
+        NSLog(@&quot;consume wait&quot;);
+        [condition wait];
+    }
+    
+    NSLog(@&quot;consume processing data&quot;);
+    
+    [dataArray removeAllObjects];
+    NSLog(@&quot;consume dataArray:%@&quot;,dataArray);
+    
+    [condition unlock];
+
+}
+
+- (void)product{
+    
+  	sleep(1);
+  
+  	NSLog(@&quot;product&quot;);
+    [condition lock];
+    
+    NSLog(@&quot;product sleep&quot;);
+    sleep(5);
+    
+    NSLog(@&quot;product processing data&quot;);
+    [dataArray addObject:@&quot;1&quot;];
+    
+    NSLog(@&quot;product signal&quot;);
+    [condition signal];
+    [condition unlock];
+}
+
+</code></pre></div><p>官网文档说，当线程等待一个条件时，线程会解锁并被阻塞，当收到条件信号后，线程会重新获得锁。另外有一个注意点，由于可能存在信号干扰，把线程错误唤起，所以代码内要对条件进行判断，以免错误信号唤起。</p> <blockquote><p><strong>When a thread waits on a condition, the condition object unlocks its lock and blocks the thread. When the condition is signaled, the system wakes up the thread.</strong> The condition object then reacquires its lock before returning from the wait or waitUntilDate: method. Thus, from the point of view of the thread, it is as if it always held the lock.</p> <p><strong>There are timing issues involved in signaling that may cause false signals to appear.</strong></p></blockquote> <h3 id="nsconditionlock"><a href="#nsconditionlock" class="header-anchor">#</a> <strong>NSConditionLock</strong></h3> <blockquote><p><code>NSConditionLock</code> 借助 <code>NSCondition</code> 来实现，它的本质就是一个生产者-消费者模型。“条件被满足”可以理解为生产者提供了新的内容。<code>NSConditionLock</code> 的内部持有一个 <code>NSCondition</code> 对象，以及 <code>_condition_value</code> 属性，在初始化时就会对这个属性进行赋值</p></blockquote> <p>官网生产者消费者模式伪代码：</p> <div class="language-objective-c extra-class"><pre class="language-text"><code>//producer
+id condLock = [[NSConditionLock alloc] initWithCondition:NO_DATA];
+ 
+while(true)
+{
+    [condLock lock];
+    /* Add data to the queue. */
+    [condLock unlockWithCondition:HAS_DATA];
+}
+
+
+
+//consumer
+while (true)
+{
+    [condLock lockWhenCondition:HAS_DATA];
+    /* Remove data from the queue. */
+    [condLock unlockWithCondition:(isEmpty ? NO_DATA : HAS_DATA)];
+ 
+    // Process the data locally.
+}
+
+</code></pre></div><p>注意，官网的示例代码中，消费者是先从缓冲区把自己的数据拿下来，然后如果有数据则通知其他消费者继续取数据，这里实现的比较好。</p> <p>OC代码示例：</p> <div class="language-objective-c extra-class"><pre class="language-text"><code>static const NSInteger kConditionLockNoData = 0;
+static const NSInteger kConditionLockHaveData = 1;
+
+NSConditionLock *conditionLock =  [[NSConditionLock alloc] initWithCondition:kConditionLockNoData];
+
+- (void)consume{
+  
+    NSLog(@&quot;consume&quot;);
+    [conditionLock lockWhenCondition:kConditionLockHaveData];
+    
+    NSLog(@&quot;consume processing data&quot;);
+    [dataArray removeAllObjects];
+    NSLog(@&quot;consume dataArray:%@&quot;,dataArray);
+    
+    [conditionLock unlock];
+
+}
+
+- (void)product{
+    
+    NSLog(@&quot;product&quot;);
+    [conditionLock lock];
+    
+    NSLog(@&quot;product sleep&quot;);
+    sleep(5);
+    
+    NSLog(@&quot;product processing data&quot;);
+    [dataArray addObject:@&quot;1&quot;];
+    
+    [conditionLock unlockWithCondition:kConditionLockHaveData];
+
+}
+</code></pre></div><h2 id="pthread-mutex"><a href="#pthread-mutex" class="header-anchor">#</a> <strong>pthread_mutex</strong></h2> <blockquote><p>pthread 表示 POSIX thread，定义了一组跨平台的线程相关的 API</p></blockquote> <div class="language-objective-c extra-class"><pre class="language-text"><code>- (void)pthread_mutex{
+    
+    
+    //pthread_mutex
+    {
+        pthread_mutex_t mutex;
+        pthread_mutex_init(&amp;mutex, NULL);
+        pthread_mutex_lock(&amp;mutex);
+        pthread_mutex_unlock(&amp;mutex);
+    }
+
+    
+    //pthread_cod
+    {
+        pthread_mutex_t mutex;
+        pthread_cond_t cond;
+        
+        //init
+        pthread_mutex_init(&amp;mutex, NULL);
+        pthread_cond_init(&amp;cond, NULL);
+        
+        
+        {
+            //consumer
+            pthread_mutex_lock(&amp;mutex);
+            
+            while (dataArray.count == 0) {
+                pthread_cond_wait(&amp;cond, &amp;mutex);
+            }
+            
+            [dataArray removeAllObjects];
+            
+            pthread_mutex_unlock(&amp;mutex);
+        }
+        
+        {
+            //producer
+            pthread_mutex_lock(&amp;mutex);
+            
+            [dataArray addObject:@&quot;1&quot;];
+            pthread_cond_signal(&amp;cond);
+            
+            pthread_mutex_unlock(&amp;mutex);
+        }
+        
+    }
+    
+    //pthread Recursive
+    {
+        pthread_mutex_t mutex;
+        pthread_mutexattr_t mutexattr;
+        
+        pthread_mutexattr_init(&amp;mutexattr);
+        pthread_mutexattr_settype(&amp;mutexattr, PTHREAD_MUTEX_RECURSIVE);
+        
+        pthread_mutex_init(&amp;mutex, &amp;mutexattr);
+        
+        pthread_mutex_lock(&amp;mutex);
+        
+        pthread_mutex_unlock(&amp;mutex);
+        
+        
+        /*
+         #define PTHREAD_MUTEX_NORMAL        0
+         #define PTHREAD_MUTEX_ERRORCHECK    1
+         #define PTHREAD_MUTEX_RECURSIVE        2
+         #define PTHREAD_MUTEX_DEFAULT        PTHREAD_MUTEX_NORMAL
+         */
+    }
+    
+}
+</code></pre></div><h2 id="synchronize"><a href="#synchronize" class="header-anchor">#</a> <strong>@synchronize</strong></h2> <p><code>@synchronize</code>相对来说性能有点差，一般用的少。</p> <p>国外有篇文章详细分析了 <code>@synchronize</code> ，其中有几点结论供参考：</p> <blockquote><ol><li>For each object that you call <code>sychronized</code> on, the Objective-C runtime allocates a recursive lock for that object and stores it in a hash table.</li> <li>It appears to be OK if an object that’s being <code>sychronized</code> on gets deallocated or set to <code>nil</code>. Although this isn’t documented, so I wouldn’t rely on it in production code.</li> <li>Be careful not to pass <code>nil</code> to your <code>sychronized</code> block! This will remove thread safety from your code. You can see if this is happening by setting a breakpoint on <code>objc_sync_nil</code>.</li></ol></blockquote> <p>详见 <a href="http://rykap.com/objective-c/2015/05/09/synchronized/" target="_blank" rel="noopener noreferrer">More than you want to know about @synchronized<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="读写锁"><a href="#读写锁" class="header-anchor">#</a> <strong>读写锁</strong></h2> <p>关于读写锁，比较好的实现是 <code>dispatch_barrier_async</code>，pthread较为底层。</p> <div class="language-objective-c extra-class"><pre class="language-text"><code>_syncqueue = dispatch_queue_create(&quot;com.test.concurrent&quot;, DISPATCH_QUEUE_CONCURRENT);
+
+- (NSString *)something{
+    __block NSString *localSomething = nil;
+    dispatch_sync(_syncqueue, ^{
+        localSomething = _something;
+    });
+    return localSomething;
+}
+
+- (void)setSomething:(NSString *)something{
+    dispatch_barrier_async(_syncqueue, ^{
+        _something = something;
+    });
+}
+</code></pre></div><h2 id="参考资料"><a href="#参考资料" class="header-anchor">#</a> <strong>参考资料</strong></h2> <p><a href="https://bestswifter.com/ios-lock/" target="_blank" rel="noopener noreferrer">深入理解 iOS 开发中的锁<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="http://www.cnblogs.com/cposture/p/SpinLock.html" target="_blank" rel="noopener noreferrer">线程同步之详解自旋锁<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="http://www.cnblogs.com/ktgu/p/3529144.html" target="_blank" rel="noopener noreferrer">多线程的代价及上下文切换<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://blog.ibireme.com/2016/01/16/spinlock_is_unsafe_in_ios/" target="_blank" rel="noopener noreferrer">不再安全的 OSSpinLock<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://github.com/ibireme/tmp/blob/master/iOSLockBenckmark/iOSLockBenckmark/ViewController.m" target="_blank" rel="noopener noreferrer">iOSLockBenckmark Demo<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://juejin.im/post/5a0a92996fb9a0451f307479" target="_blank" rel="noopener noreferrer">谈谈iOS多线程的锁<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/ThreadSafety/ThreadSafety.html#//apple_ref/doc/uid/10000057i-CH8-SW16" target="_blank" rel="noopener noreferrer">Threading Programming Guide - Using Locks<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://www.jianshu.com/p/0d1c950e6614" target="_blank" rel="noopener noreferrer">生产者/消费者模式<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="http://rykap.com/objective-c/2015/05/09/synchronized/" target="_blank" rel="noopener noreferrer">More than you want to know about @synchronized<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">8/14/2020, 8:17:04 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/iOS/OC/Thread/iOS_IPC_线程通信.html" class="prev">
+          iOS IPC 线程通信
+        </a></span> <span class="next"><a href="/iOS/OC/Kit/API_Reference系列之Mapkit解析.html">
+          API Reference 系列 之Mapkit解析
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-3b069fde data-v-349e681a><li class="level-2" data-v-3b069fde><a href="/iOS/OC/Thread/iOS%E9%94%81%E6%80%BB%E7%BB%93/iOS%E9%94%81%E6%80%BB%E7%BB%93.html#自旋锁" class="sidebar-link reco-side-自旋锁" data-v-3b069fde>自旋锁</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/OC/Thread/iOS%E9%94%81%E6%80%BB%E7%BB%93/iOS%E9%94%81%E6%80%BB%E7%BB%93.html#dispatch-semaphore" class="sidebar-link reco-side-dispatch-semaphore" data-v-3b069fde>dispatch_semaphore</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/OC/Thread/iOS%E9%94%81%E6%80%BB%E7%BB%93/iOS%E9%94%81%E6%80%BB%E7%BB%93.html#信号量与互斥锁的区别" class="sidebar-link reco-side-信号量与互斥锁的区别" data-v-3b069fde>信号量与互斥锁的区别</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/OC/Thread/iOS%E9%94%81%E6%80%BB%E7%BB%93/iOS%E9%94%81%E6%80%BB%E7%BB%93.html#条件锁" class="sidebar-link reco-side-条件锁" data-v-3b069fde>条件锁</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/OC/Thread/iOS%E9%94%81%E6%80%BB%E7%BB%93/iOS%E9%94%81%E6%80%BB%E7%BB%93.html#生产者消费者模式" class="sidebar-link reco-side-生产者消费者模式" data-v-3b069fde>生产者消费者模式</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/OC/Thread/iOS%E9%94%81%E6%80%BB%E7%BB%93/iOS%E9%94%81%E6%80%BB%E7%BB%93.html#nscondition" class="sidebar-link reco-side-nscondition" data-v-3b069fde>NSCondition</a></li><li class="level-3" data-v-3b069fde><a href="/iOS/OC/Thread/iOS%E9%94%81%E6%80%BB%E7%BB%93/iOS%E9%94%81%E6%80%BB%E7%BB%93.html#nsconditionlock" class="sidebar-link reco-side-nsconditionlock" data-v-3b069fde>NSConditionLock</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/OC/Thread/iOS%E9%94%81%E6%80%BB%E7%BB%93/iOS%E9%94%81%E6%80%BB%E7%BB%93.html#pthread-mutex" class="sidebar-link reco-side-pthread-mutex" data-v-3b069fde>pthread_mutex</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/OC/Thread/iOS%E9%94%81%E6%80%BB%E7%BB%93/iOS%E9%94%81%E6%80%BB%E7%BB%93.html#synchronize" class="sidebar-link reco-side-synchronize" data-v-3b069fde>@synchronize</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/OC/Thread/iOS%E9%94%81%E6%80%BB%E7%BB%93/iOS%E9%94%81%E6%80%BB%E7%BB%93.html#读写锁" class="sidebar-link reco-side-读写锁" data-v-3b069fde>读写锁</a></li><li class="level-2" data-v-3b069fde><a href="/iOS/OC/Thread/iOS%E9%94%81%E6%80%BB%E7%BB%93/iOS%E9%94%81%E6%80%BB%E7%BB%93.html#参考资料" class="sidebar-link reco-side-参考资料" data-v-3b069fde>参考资料</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-2a01419c data-v-2a01419c><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-2a01419c><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-2a01419c></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-2a01419c></path></svg></div></div></div>
+    <script src="/assets/js/app.3efcfa1f.js" defer></script><script src="/assets/js/3.d41f5393.js" defer></script><script src="/assets/js/1.0d0e82e9.js" defer></script><script src="/assets/js/20.92e231d8.js" defer></script>
+  </body>
+</html>
